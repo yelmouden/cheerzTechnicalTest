@@ -16,7 +16,8 @@ let package = Package(
             targets: ["Networking"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0")
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
+        .package(url: "https://github.com/Quick/Nimble", from: "13.0.0"),
     ],
     targets: [
         .target(
@@ -27,7 +28,15 @@ let package = Package(
             dependencies: [
                 "AppConfiguration",
                 .product(name: "Dependencies", package: "swift-dependencies"),
+                
             ]
         ),
+        .testTarget(
+            name: "NetworkingTests",
+            dependencies: [
+                "Networking",
+                .product(name: "Nimble", package: "Nimble"),
+            ]
+        )
     ]
 )
