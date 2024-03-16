@@ -14,6 +14,7 @@
 		DCFB4A5B2BA5D49000B0F78B /* UnsplahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A5A2BA5D49000B0F78B /* UnsplahTests.swift */; };
 		DCFB4A652BA5D49000B0F78B /* UnsplahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */; };
 		DCFB4A672BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A662BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift */; };
+		DCFB4A752BA5D8D400B0F78B /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahUITests.swift; sourceTree = "<group>"; };
 		DCFB4A662BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UnsplashPackages; path = ../UnsplashPackages; sourceTree = "<group>"; };
+		DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		DCFB4A762BA5D9B300B0F78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +99,12 @@
 		DCFB4A482BA5D48E00B0F78B /* Unsplah */ = {
 			isa = PBXGroup;
 			children = (
+				DCFB4A762BA5D9B300B0F78B /* Info.plist */,
 				DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */,
 				DCFB4A4B2BA5D48E00B0F78B /* ContentView.swift */,
 				DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */,
 				DCFB4A4F2BA5D49000B0F78B /* Preview Content */,
+				DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */,
 			);
 			path = Unsplah;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			files = (
 				DCFB4A512BA5D49000B0F78B /* Preview Assets.xcassets in Resources */,
 				DCFB4A4E2BA5D49000B0F78B /* Assets.xcassets in Resources */,
+				DCFB4A752BA5D8D400B0F78B /* Common.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Unsplah/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Unsplah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +465,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Unsplah/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Unsplah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
