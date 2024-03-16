@@ -27,4 +27,3 @@ extension Logger: AppLoggerType {
         error("\(message, privacy: .public)")
     }
 }
-

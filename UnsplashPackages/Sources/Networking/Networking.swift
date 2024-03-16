@@ -13,9 +13,9 @@ private let logger = AppLogger(loggerType: Logger(subsystem: "Networking", categ
 public struct Networking {
 
     private let apiEndPoint: String
-    
+
     @Dependency(\.requester) var requester
-    
+
     public init(apiEndPoint: String = AppConfiguration.apiEndPoint) {
         self.apiEndPoint = apiEndPoint
     }

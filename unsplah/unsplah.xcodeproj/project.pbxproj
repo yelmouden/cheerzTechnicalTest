@@ -79,7 +79,6 @@
 		DCFB4A3D2BA5D48E00B0F78B = {
 			isa = PBXGroup;
 			children = (
-				DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */,
 				DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */,
 				DCFB4A482BA5D48E00B0F78B /* Unsplah */,
 				DCFB4A592BA5D49000B0F78B /* UnsplahTests */,
@@ -105,6 +104,7 @@
 				DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */,
 				DCFB4A4B2BA5D48E00B0F78B /* ContentView.swift */,
 				DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */,
+				DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */,
 				DCFB4A4F2BA5D49000B0F78B /* Preview Content */,
 				DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */,
 			);

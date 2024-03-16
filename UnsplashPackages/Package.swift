@@ -21,13 +21,20 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
         .package(url: "https://github.com/Quick/Nimble", from: "13.0.0"),
+        .package(url: "https://github.com/realm/SwiftLint", branch: "main")
     ],
     targets: [
         .target(
-            name: "AppConfiguration"
+            name: "AppConfiguration",
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
         ),
         .target(
-            name: "AppLogger"
+            name: "AppLogger",
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
         ),
         .testTarget(
             name: "AppLoggerTests",
@@ -42,6 +49,9 @@ let package = Package(
                 "AppConfiguration",
                 "AppLogger",
                 .product(name: "Dependencies", package: "swift-dependencies"),
+            ],
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]
         ),
         .testTarget(
