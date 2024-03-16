@@ -12,6 +12,9 @@ let package = Package(
             name: "AppConfiguration",
             targets: ["AppConfiguration"]),
         .library(
+            name: "AppLogger",
+            targets: ["AppLogger"]),
+        .library(
             name: "Networking",
             targets: ["Networking"]),
     ],
@@ -24,11 +27,14 @@ let package = Package(
             name: "AppConfiguration"
         ),
         .target(
+            name: "AppLogger"
+        ),
+        .target(
             name: "Networking",
             dependencies: [
                 "AppConfiguration",
+                "AppLogger",
                 .product(name: "Dependencies", package: "swift-dependencies"),
-                
             ]
         ),
         .testTarget(

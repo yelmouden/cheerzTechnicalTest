@@ -1,12 +1,17 @@
+import AppLogger
 import Dependencies
 import Foundation
+import OSLog
 import Utils
 
 enum NetworkingError: Error {
-    case badRequest
+    case badURL
 }
 
+private let logger = AppLogger(loggerType: Logger(subsystem: "Networking", category: "Request"))
+
 public struct Networking {
+
     private let apiEndPoint: String
     
     @Dependency(\.requester) var requester
@@ -27,18 +32,25 @@ public struct Networking {
         }
 
         guard let url = components.url else {
-            throw NetworkingError.badRequest
+            logger.error(message: "Invalid URL")
+            throw URLError(URLError.badURL)
         }
 
         var request = URLRequest(url: url)
         request.httpMethod = service.method.rawValue
         request.httpBody = service.data
 
-        let (data, _) = try await requester.data(for: request, delegate: nil)
+        logger.info(message: "request made on \(request)")
 
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        do {
+            let (data, _) = try await requester.data(for: request, delegate: nil)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-        return try decoder.decode(T.self, from: data)
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            logger.error(message: "error for \(request) : \(error.localizedDescription)")
+            throw error
+        }
     }
 }
