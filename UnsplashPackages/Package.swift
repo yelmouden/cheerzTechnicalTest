@@ -29,6 +29,13 @@ let package = Package(
         .target(
             name: "AppLogger"
         ),
+        .testTarget(
+            name: "AppLoggerTests",
+            dependencies: [
+                "AppLogger",
+                .product(name: "Nimble", package: "Nimble"),
+            ]
+        ),
         .target(
             name: "Networking",
             dependencies: [

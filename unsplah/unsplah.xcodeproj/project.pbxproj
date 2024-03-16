@@ -48,6 +48,7 @@
 		DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UnsplashPackages; path = ../UnsplashPackages; sourceTree = "<group>"; };
 		DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		DCFB4A762BA5D9B300B0F78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unsplah.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		DCFB4A3D2BA5D48E00B0F78B = {
 			isa = PBXGroup;
 			children = (
+				DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */,
 				DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */,
 				DCFB4A482BA5D48E00B0F78B /* Unsplah */,
 				DCFB4A592BA5D49000B0F78B /* UnsplahTests */,

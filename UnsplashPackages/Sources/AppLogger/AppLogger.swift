@@ -8,9 +8,9 @@
 import Foundation
 
 public class AppLogger {
-    private let loggerType: LoggerType
+    private let loggerType: AppLoggerType
 
-    public init(loggerType: LoggerType) {
+    public init(loggerType: AppLoggerType) {
         self.loggerType = loggerType
     }
 

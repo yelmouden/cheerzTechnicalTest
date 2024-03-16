@@ -8,13 +8,13 @@
 import Foundation
 import OSLog
 
-public protocol LoggerType {
+public protocol AppLoggerType {
     func info(message: String)
     func warning(message: String)
     func error(message: String)
 }
 
-extension Logger: LoggerType {
+extension Logger: AppLoggerType {
     public func info(message: String) {
         info("\(message, privacy: .public)")
     }

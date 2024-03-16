@@ -1,0 +1,52 @@
+{
+  "configurations" : [
+    {
+      "id" : "3C042B22-369F-4639-B4F7-4A346F8AF0A8",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Unsplah.xcodeproj",
+      "identifier" : "DCFB4A452BA5D48E00B0F78B",
+      "name" : "Unsplah"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Unsplah.xcodeproj",
+        "identifier" : "DCFB4A552BA5D49000B0F78B",
+        "name" : "UnsplahTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Unsplah.xcodeproj",
+        "identifier" : "DCFB4A5F2BA5D49000B0F78B",
+        "name" : "UnsplahUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/UnsplashPackages",
+        "identifier" : "AppLoggerTests",
+        "name" : "AppLoggerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/UnsplashPackages",
+        "identifier" : "NetworkingTests",
+        "name" : "NetworkingTests"
+      }
+    }
+  ],
+  "version" : 1
+}
