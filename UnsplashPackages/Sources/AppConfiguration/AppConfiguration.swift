@@ -6,9 +6,27 @@
 //
 
 import Foundation
+import UIKit
 
-public enum AppConfiguration {
-    public static var apiEndPoint: String { return Info().API_ENDPOINT }
+public class AppConfiguration {
+    public enum API {
+        public static var apiEndPoint: String { return Info().API_ENDPOINT }
+        public static var apiKey: String { return Info().API_KEY }
+    }
+
+    public static func setupNavigationBar(backgroundColor: UIColor, titleColor: UIColor) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = backgroundColor
+
+        let uiTitleColor = titleColor
+        appearance.largeTitleTextAttributes = [.foregroundColor: uiTitleColor]
+        appearance.titleTextAttributes = [.foregroundColor: uiTitleColor]
+
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+
 }
 
 private extension AppConfiguration {

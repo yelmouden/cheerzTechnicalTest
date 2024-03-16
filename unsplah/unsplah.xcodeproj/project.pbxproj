@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9EDC772BA5FDC500FFA6F3 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = DC9EDC762BA5FDC500FFA6F3 /* Home */; };
+		DCB6EE3F2BA610E500CD9998 /* AppConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DCB6EE3E2BA610E500CD9998 /* AppConfiguration */; };
 		DCFB4A4A2BA5D48E00B0F78B /* UnsplahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */; };
-		DCFB4A4C2BA5D48E00B0F78B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A4B2BA5D48E00B0F78B /* ContentView.swift */; };
+		DCFB4A4C2BA5D48E00B0F78B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */; };
 		DCFB4A4E2BA5D49000B0F78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */; };
 		DCFB4A512BA5D49000B0F78B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A502BA5D49000B0F78B /* Preview Assets.xcassets */; };
 		DCFB4A5B2BA5D49000B0F78B /* UnsplahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A5A2BA5D49000B0F78B /* UnsplahTests.swift */; };
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		DCFB4A462BA5D48E00B0F78B /* Unsplah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahApp.swift; sourceTree = "<group>"; };
-		DCFB4A4B2BA5D48E00B0F78B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCFB4A502BA5D49000B0F78B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DCFB4A562BA5D49000B0F78B /* UnsplahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9EDC772BA5FDC500FFA6F3 /* Home in Frameworks */,
+				DCB6EE3F2BA610E500CD9998 /* AppConfiguration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC9EDC752BA5FDC500FFA6F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCFB4A3D2BA5D48E00B0F78B = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +95,7 @@
 				DCFB4A592BA5D49000B0F78B /* UnsplahTests */,
 				DCFB4A632BA5D49000B0F78B /* UnsplahUITests */,
 				DCFB4A472BA5D48E00B0F78B /* Products */,
+				DC9EDC752BA5FDC500FFA6F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +114,7 @@
 			children = (
 				DCFB4A762BA5D9B300B0F78B /* Info.plist */,
 				DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */,
-				DCFB4A4B2BA5D48E00B0F78B /* ContentView.swift */,
+				DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */,
 				DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */,
 				DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */,
 				DCFB4A4F2BA5D49000B0F78B /* Preview Content */,
@@ -152,6 +164,10 @@
 			dependencies = (
 			);
 			name = Unsplah;
+			packageProductDependencies = (
+				DC9EDC762BA5FDC500FFA6F3 /* Home */,
+				DCB6EE3E2BA610E500CD9998 /* AppConfiguration */,
+			);
 			productName = Unsplah;
 			productReference = DCFB4A462BA5D48E00B0F78B /* Unsplah.app */;
 			productType = "com.apple.product-type.application";
@@ -267,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCFB4A4C2BA5D48E00B0F78B /* ContentView.swift in Sources */,
+				DCFB4A4C2BA5D48E00B0F78B /* AppView.swift in Sources */,
 				DCFB4A4A2BA5D48E00B0F78B /* UnsplahApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +323,7 @@
 /* Begin XCBuildConfiguration section */
 		DCFB4A682BA5D49000B0F78B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -370,6 +387,7 @@
 		};
 		DCFB4A692BA5D49000B0F78B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -602,6 +620,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC9EDC762BA5FDC500FFA6F3 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+		DCB6EE3E2BA610E500CD9998 /* AppConfiguration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppConfiguration;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCFB4A3E2BA5D48E00B0F78B /* Project object */;
 }

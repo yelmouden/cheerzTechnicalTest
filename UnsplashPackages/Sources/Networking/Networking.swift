@@ -1,3 +1,4 @@
+import AppConfiguration
 import AppLogger
 import Dependencies
 import Foundation
@@ -13,11 +14,16 @@ private let logger = AppLogger(loggerType: Logger(subsystem: "Networking", categ
 public struct Networking {
 
     private let apiEndPoint: String
+    private let apiKey: String
 
     @Dependency(\.requester) var requester
 
-    public init(apiEndPoint: String = AppConfiguration.apiEndPoint) {
+    public init(
+        apiEndPoint: String = AppConfiguration.API.apiEndPoint,
+        apiKey: String = AppConfiguration.API.apiKey
+    ) {
         self.apiEndPoint = apiEndPoint
+        self.apiKey = apiKey
     }
 
     public func request<T: Decodable>(service: ServiceType) async throws -> T {
@@ -30,6 +36,8 @@ public struct Networking {
         if service.method == .get {
             components.queryItems = service.quertyItems
         }
+
+        components.queryItems?.append(.init(name: "client_id", value: apiKey))
 
         guard let url = components.url else {
             logger.error(message: "Invalid URL")

@@ -17,6 +17,9 @@ let package = Package(
         .library(
             name: "Networking",
             targets: ["Networking"]),
+        .library(
+            name: "Home",
+            targets: ["Home"]),
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
@@ -41,6 +44,43 @@ let package = Package(
             dependencies: [
                 "AppLogger",
                 .product(name: "Nimble", package: "Nimble"),
+            ]
+        ),
+        .target(
+            name: "DesignSystem",
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
+        ),
+        .target(
+            name: "Home",
+            dependencies: [
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                "Networking",
+                "SharedModels",
+                "Utils"
+            ],
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
+        ),
+        .testTarget(
+            name: "HomeTests",
+            dependencies: [
+                "Home",
+                .product(name: "Nimble", package: "Nimble"),
+            ]
+        ),
+        .target(
+            name: "SharedModels",
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
+        ),
+        .target(
+            name: "Utils",
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]
         ),
         .target(

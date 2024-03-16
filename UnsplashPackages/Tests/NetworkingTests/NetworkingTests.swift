@@ -13,7 +13,7 @@ import XCTest
 
 final class NetworkingTests: XCTestCase {
 
-    var tested: Networking { Networking(apiEndPoint: "www.apple.com") }
+    var tested: Networking { Networking(apiEndPoint: "www.apple.com", apiKey: "") }
 
     func testNetworking_shouldReturnCorrectData_whenRequestSucceeded() async {
         let networking = withDependencies {
