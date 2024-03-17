@@ -7,6 +7,7 @@
 
 import AppConfiguration
 import Dependencies
+import DesignSystem
 import SharedModels
 import SwiftUI
 import Utils
@@ -20,8 +21,19 @@ struct HomeView: View {
     }
 
     var body: some View {
-        ScrollView {
-            
+        MainContainer {
+            switch viewModel.state {
+            case .loading:
+                LoaderView()
+                    .frame(width: 30, height: 30)
+            case .loaded(let photos):
+                ScrollView {
+
+                }
+            case .error:
+                EmptyView()
+            }
+
         }
         .navigationTitle("Home")
 

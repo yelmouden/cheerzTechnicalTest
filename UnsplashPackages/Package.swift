@@ -68,6 +68,7 @@ let package = Package(
             name: "Home",
             dependencies: [
                 .product(name: "Dependencies", package: "swift-dependencies"),
+                "DesignSystem",
                 "Networking",
                 "SharedModels",
                 "Utils"
