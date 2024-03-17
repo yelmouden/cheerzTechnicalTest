@@ -15,15 +15,26 @@ let package = Package(
             name: "AppLogger",
             targets: ["AppLogger"]),
         .library(
-            name: "Networking",
-            targets: ["Networking"]),
+            name: "DesignSystem",
+            targets: ["DesignSystem"]),
         .library(
             name: "Home",
             targets: ["Home"]),
+        .library(
+            name: "SharedModels",
+            targets: ["SharedModels"]),
+        .library(
+            name: "Networking",
+            targets: ["Networking"]),
+        .library(
+            name: "Utils",
+            targets: ["Utils"]),
+
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
         .package(url: "https://github.com/Quick/Nimble", from: "13.0.0"),
+        .package(url: "https://github.com/SwiftGen/SwiftGenPlugin", from: "6.6.0"),
         .package(url: "https://github.com/realm/SwiftLint", branch: "main")
     ],
     targets: [
@@ -49,7 +60,8 @@ let package = Package(
         .target(
             name: "DesignSystem",
             plugins: [
-                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint"),
+                .plugin(name: "SwiftGenPlugin", package: "SwiftGenPlugin")
             ]
         ),
         .target(
