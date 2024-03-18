@@ -5,7 +5,9 @@
 //  Created by Yassin El Mouden on 16/03/2024.
 //
 
+import DesignSystem
 import Home
+import Localizable
 import SwiftUI
 import Utils
 
@@ -22,22 +24,18 @@ struct AppView: View {
             }
             .environment(homeRouting)
             .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("First")
+                    Image(systemName: "house")
+                Text("\(.localizable.homeViewTitle)")
                 }
 
             Text("Tab 2")
                 .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Second")
-                }
-
-            Text("Tab 3")
-                .tabItem {
-                    Image(systemName: "3.circle")
-                    Text("Third")
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
         }
+        .accentColor(DSColors.whiteText.swiftUIColor)
+        
     }
 }
 

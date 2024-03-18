@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC98A5A52BA888DF0086662E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */; };
 		DC9EDC772BA5FDC500FFA6F3 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = DC9EDC762BA5FDC500FFA6F3 /* Home */; };
 		DCB6EE3F2BA610E500CD9998 /* AppConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DCB6EE3E2BA610E500CD9998 /* AppConfiguration */; };
 		DCB6EE412BA72F1D00CD9998 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = DCB6EE402BA72F1D00CD9998 /* DesignSystem */; };
+		DCB6EE432BA87E7700CD9998 /* Localizable in Frameworks */ = {isa = PBXBuildFile; productRef = DCB6EE422BA87E7700CD9998 /* Localizable */; };
 		DCFB4A4A2BA5D48E00B0F78B /* UnsplahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */; };
 		DCFB4A4C2BA5D48E00B0F78B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */; };
 		DCFB4A4E2BA5D49000B0F78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCFB4A462BA5D48E00B0F78B /* Unsplah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahApp.swift; sourceTree = "<group>"; };
 		DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCB6EE412BA72F1D00CD9998 /* DesignSystem in Frameworks */,
+				DCB6EE432BA87E7700CD9998 /* Localizable in Frameworks */,
 				DC9EDC772BA5FDC500FFA6F3 /* Home in Frameworks */,
 				DCB6EE3F2BA610E500CD9998 /* AppConfiguration in Frameworks */,
 			);
@@ -121,6 +125,7 @@
 				DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */,
 				DCFB4A4F2BA5D49000B0F78B /* Preview Content */,
 				DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */,
+				DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */,
 			);
 			path = Unsplah;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				DC9EDC762BA5FDC500FFA6F3 /* Home */,
 				DCB6EE3E2BA610E500CD9998 /* AppConfiguration */,
 				DCB6EE402BA72F1D00CD9998 /* DesignSystem */,
+				DCB6EE422BA87E7700CD9998 /* Localizable */,
 			);
 			productName = Unsplah;
 			productReference = DCFB4A462BA5D48E00B0F78B /* Unsplah.app */;
@@ -241,6 +247,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = DCFB4A3D2BA5D48E00B0F78B;
 			productRefGroup = DCFB4A472BA5D48E00B0F78B /* Products */;
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFB4A512BA5D49000B0F78B /* Preview Assets.xcassets in Resources */,
+				DC98A5A52BA888DF0086662E /* LaunchScreen.storyboard in Resources */,
 				DCFB4A4E2BA5D49000B0F78B /* Assets.xcassets in Resources */,
 				DCFB4A752BA5D8D400B0F78B /* Common.xcconfig in Resources */,
 			);
@@ -458,7 +466,7 @@
 				INFOPLIST_FILE = Unsplah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,7 +499,7 @@
 				INFOPLIST_FILE = Unsplah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -636,6 +644,10 @@
 		DCB6EE402BA72F1D00CD9998 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
+		};
+		DCB6EE422BA87E7700CD9998 /* Localizable */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Localizable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

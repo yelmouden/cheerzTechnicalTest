@@ -23,5 +23,8 @@ public struct MainContainer<Content: View>: View {
             }
         }
         .background(DSColors.background.swiftUIColor)
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarColorScheme(.dark, for: .tabBar)
+
     }
 }

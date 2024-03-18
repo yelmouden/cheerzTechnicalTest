@@ -24,6 +24,9 @@ let package = Package(
             name: "SharedModels",
             targets: ["SharedModels"]),
         .library(
+            name: "Localizable",
+            targets: ["Localizable"]),
+        .library(
             name: "Networking",
             targets: ["Networking"]),
         .library(
@@ -34,8 +37,10 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
         .package(url: "https://github.com/Quick/Nimble", from: "13.0.0"),
+        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", from: "3.0.0"),
         .package(url: "https://github.com/SwiftGen/SwiftGenPlugin", from: "6.6.0"),
-        .package(url: "https://github.com/realm/SwiftLint", branch: "main")
+        .package(url: "https://github.com/realm/SwiftLint", branch: "main"),
+        .package(url: "https://github.com/liamnichols/xcstrings-tool-plugin.git", from: "0.1.2"),
     ],
     targets: [
         .target(
@@ -59,7 +64,11 @@ let package = Package(
         ),
         .target(
             name: "DesignSystem",
+            dependencies: [
+                .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI")
+            ],
             plugins: [
+                "Localizable",
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint"),
                 .plugin(name: "SwiftGenPlugin", package: "SwiftGenPlugin")
             ]
@@ -69,6 +78,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 "DesignSystem",
+                "Localizable",
                 "Networking",
                 "SharedModels",
                 "Utils"
@@ -86,6 +96,9 @@ let package = Package(
         ),
         .target(
             name: "SharedModels",
+            dependencies: [
+                "Utils"
+            ],
             plugins: [
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]
@@ -94,6 +107,15 @@ let package = Package(
             name: "Utils",
             plugins: [
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
+        ),
+        .target(
+            name: "Localizable",
+            dependencies: [
+                .product(name: "XCStringsToolPlugin", package: "xcstrings-tool-plugin"),
+            ],
+            swiftSettings: [
+                .define("XCSTRINGS_TOOL_ACCESS_LEVEL_PUBLIC")
             ]
         ),
         .target(

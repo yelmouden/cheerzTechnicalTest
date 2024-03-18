@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum State<T: Equatable>: Equatable {
+public enum LoadingState<T: Equatable>: Equatable {
     case loading
     case loaded(T)
     case error

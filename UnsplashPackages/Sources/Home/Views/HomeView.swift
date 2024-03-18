@@ -14,6 +14,8 @@ import Utils
 
 struct HomeView: View {
     private let viewModel: HomeViewModel
+    private let columns = [GridItem(.adaptive(minimum: 180, maximum: .infinity), spacing: 0)]
+
     @Environment(Routing.self) private var routing
 
     init(viewModel: HomeViewModel) {
@@ -28,15 +30,38 @@ struct HomeView: View {
                     .frame(width: 30, height: 30)
             case .loaded(let photos):
                 ScrollView {
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(photos) { photo in
+                            PhotoCell(
+                                urlPhoto: photo.urlsPhotoType.small,
+                                userName: photo.user.username,
+                                urlUserProfile: photo.user.urlsProfilePhotoType.small,
+                                nbLikes: photo.likes
+                            )
+
+                        }
+                    }
+                    .padding(.bottom, Margins.medium)
 
                 }
+                .transition(.move(edge: .bottom))
+                .refreshable {
+                    await viewModel.retrieve()
+                }
+
             case .error:
-                EmptyView()
+                ErrorView(retry: {
+                    Task {
+                        await viewModel.retrieve()
+                    }
+                })
             }
-
         }
-        .navigationTitle("Home")
-
+        .animation(.bouncy, value: viewModel.state)
+        .navigationTitle("\(.localizable.homeViewTitle)")
+        .task {
+            await viewModel.retrieve()
+        }
     }
 }
 
@@ -44,7 +69,25 @@ struct HomeView: View {
     NavigationStack {
         HomeView(viewModel: withDependencies {
             $0.homeRepository = .init(getListPhotos: {
-                [Photo(id: "")]
+                [Photo(
+                    id: "",
+                    likes: 10,
+                    urlsPhotoType: .init(
+                        raw: "",
+                        full: "",
+                        regular: "",
+                        small: "",
+                        thumb: ""
+                    ),
+                    user: .init(
+                        username: "",
+                        urlsProfilePhotoType: .init(
+                            small: "",
+                            medium: "",
+                            large: ""
+                        )
+                    )
+                )]
             })
         } operation: {
             HomeViewModel()

@@ -21,27 +21,17 @@ final class HomeViewModel {
 
     // MARK: Public Properties
 
-    var state: State<[Photo]> = .loading
-
-    // MARK: Init
-
-    init() {
-        Task {
-            //await retrieve()
-        }
-    }
+    var state: LoadingState<[Photo]> = .loading
 
     // MARK: Public Methods
 
-    // Retrieve latest Photos
     @MainActor
+    // Retrieve latest Photos
     func retrieve() async {
         do {
             state = .loaded(try await homeRepository.getListPhotos())
         } catch {
             state = .error
         }
-
-        print("state", state)
     }
 }
