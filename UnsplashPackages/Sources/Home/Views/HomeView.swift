@@ -38,7 +38,6 @@ struct HomeView: View {
                                 urlUserProfile: photo.user.urlsProfilePhotoType.small,
                                 nbLikes: photo.likes
                             )
-
                         }
                     }
                     .padding(.bottom, Margins.medium)

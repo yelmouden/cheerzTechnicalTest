@@ -8,6 +8,7 @@
 import Localizable
 import SDWebImageSwiftUI
 import SwiftUI
+import Utils
 
 public struct PhotoCell: View {
     let urlPhoto: String
@@ -31,58 +32,24 @@ public struct PhotoCell: View {
 
     public var body: some View {
         ZStack(alignment: .bottomLeading) {
-            if let url = URL(string: urlPhoto) {
-                WebImage(url: url) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                        .clipped()
-
-                } placeholder: {
-                    Color.clear
-                        .frame(height: 350)
-                }
+            UnsplashWebImage(path: urlPhoto) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .clipped()
+            } placeholder: {
+                Color.gray
+            }
+            VStack {
+                Spacer()
+                EncartView(
+                    urlProfile: urlUserProfile,
+                    userName: userName,
+                    nbLikes: nbLikes
+                )
             }
 
-            VStack(alignment: .leading) {
-                HStack {
-                    WebImage(url: URL(string: urlUserProfile)) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 32, height: 32)
-                            .clipShape(Circle())
-                            .transition(.slide)
-
-                    } placeholder: {
-                        Color.clear
-                            .frame(width: 32, height: 32)
-                    }
-
-                    Text("\(userName)")
-                        .font(.footnote)
-                        .bold()
-                        .foregroundStyle(DSColors.whiteText.swiftUIColor)
-
-                    Spacer()
-                }
-                .padding([.top, .leading, .trailing], Margins.small)
-
-                HStack {
-                    Spacer()
-                    Image(systemName: "heart.fill")
-                        .foregroundStyle(Color.red)
-                    Text("\(.localizable.homeLikeTitle(animatedNumber))")
-                        .contentTransition(.numericText())
-                        .font(.footnote)
-                        .bold()
-                        .foregroundStyle(DSColors.whiteText.swiftUIColor)
-                }
-                .padding([.bottom, .leading, .trailing], Margins.small)
-            }
-            .frame(maxWidth: .infinity)
-            .background(Color.black.opacity(0.6))
         }
         .frame(height: 350)
         .overlay(
@@ -92,18 +59,55 @@ public struct PhotoCell: View {
         .background(Color.black)
         .cornerRadius(8)
         .padding([.leading, .trailing], CornerRadius.small)
-        .scrollTransition { content, phase in
-            content
-                .blur(radius: phase.value > -1 ? 0 : 3)
-        }
-        .onAppear {
-            withAnimation(.easeInOut.delay(0.3)) {
-                animatedNumber = nbLikes
-            }
-        }
+
     }
 }
 
+struct EncartView: View {
+    let urlProfile: String
+    let userName: String
+    let nbLikes: Int
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                UnsplashWebImage(path: urlProfile) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(Circle())
+                } placeholder: {
+                    Color.gray
+                        .clipShape(Circle())
+                }
+                .frame(width: 32, height: 32)
+
+
+                Text("\(userName)")
+                    .font(.footnote)
+                    .bold()
+                    .foregroundStyle(DSColors.whiteText.swiftUIColor)
+
+                Spacer()
+            }
+            .padding([.top, .leading, .trailing], Margins.small)
+
+            HStack {
+                Spacer()
+                Image(systemName: "heart.fill")
+                    .foregroundStyle(Color.red)
+                Text("\(.localizable.homeLikeTitle(nbLikes))")
+                    .contentTransition(.numericText())
+                    .font(.footnote)
+                    .bold()
+                    .foregroundStyle(DSColors.whiteText.swiftUIColor)
+            }
+            .padding([.bottom, .leading, .trailing], Margins.small)
+        }
+        .frame(maxWidth: .infinity)
+        .background(Color.black.opacity(0.6))
+    }
+}
 #Preview {
     PhotoCell(
         urlPhoto: "",

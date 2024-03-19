@@ -13,7 +13,10 @@ import SwiftUI
 struct UnsplahApp: App {
 
     init() {
-        AppConfiguration.setupNavigationBar(backgroundColor: DSColors.background.color, titleColor: DSColors.whiteText.color)
+        AppConfiguration.setupNavigationBar(
+            backgroundColor: DSColors.background.color,
+            titleColor: DSColors.whiteText.color
+        )
     }
     
     var body: some Scene {

@@ -8,6 +8,7 @@
 import DesignSystem
 import Home
 import Localizable
+import SDWebImageSwiftUI
 import SwiftUI
 import Utils
 
@@ -35,7 +36,7 @@ struct AppView: View {
                 }
         }
         .accentColor(DSColors.whiteText.swiftUIColor)
-        
+
     }
 }
 

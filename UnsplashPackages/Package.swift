@@ -41,6 +41,7 @@ let package = Package(
         .package(url: "https://github.com/SwiftGen/SwiftGenPlugin", from: "6.6.0"),
         .package(url: "https://github.com/realm/SwiftLint", branch: "main"),
         .package(url: "https://github.com/liamnichols/xcstrings-tool-plugin.git", from: "0.1.2"),
+        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.15.4"),
     ],
     targets: [
         .target(
@@ -65,7 +66,8 @@ let package = Package(
         .target(
             name: "DesignSystem",
             dependencies: [
-                .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI")
+                .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI"),
+                "Utils"
             ],
             plugins: [
                 "Localizable",
@@ -91,8 +93,14 @@ let package = Package(
             name: "HomeTests",
             dependencies: [
                 "Home",
+                .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "Nimble", package: "Nimble"),
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+            ],
+            resources: [
+                    .process("Resources")
             ]
+
         ),
         .target(
             name: "SharedModels",
@@ -105,6 +113,9 @@ let package = Package(
         ),
         .target(
             name: "Utils",
+            dependencies: [
+                .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI")
+            ],
             plugins: [
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]
@@ -124,6 +135,8 @@ let package = Package(
                 "AppConfiguration",
                 "AppLogger",
                 .product(name: "Dependencies", package: "swift-dependencies"),
+                .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI")
+
             ],
             plugins: [
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")

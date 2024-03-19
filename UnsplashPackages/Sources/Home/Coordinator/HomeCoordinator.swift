@@ -9,15 +9,15 @@ import SwiftUI
 import Utils
 
 public struct HomeCoordinator: View {
-    private let homeViewModel = HomeViewModel()
+    private let viewModel = HomeViewModel()
 
     public init() {
     }
+    
 
     public var body: some View {
-        HomeView(viewModel: homeViewModel)
+        HomeView(viewModel: viewModel)
             .navigationDestination(for: Destination.self) { _ in
-
             }
 
     }

@@ -30,7 +30,7 @@ public struct LoaderView: View {
                 .fill(color)
                 .frame(width: 10, height: 10)
                 .offset(x: 0, y: animateFirst ? -20 : 0)
-                .animation(
+                .animate(
                     .bouncy(
                         duration: Constant.duration,
                         extraBounce: Constant.extraBounce
@@ -41,7 +41,7 @@ public struct LoaderView: View {
                 .fill(color)
                 .offset(x: 0, y: animateSecond ? -20 : 0)
                 .frame(width: 10, height: 10)
-                .animation(
+                .animate(
                     .bouncy(
                         duration: Constant.duration,
                         extraBounce: Constant.extraBounce
@@ -52,7 +52,7 @@ public struct LoaderView: View {
                 .fill(color)
                 .offset(x: 0, y: animateThird ? -20 : 0)
                 .frame(width: 10, height: 10)
-                .animation(
+                .animate(
                     .bouncy(
                         duration: Constant.duration,
                         extraBounce: Constant.extraBounce
