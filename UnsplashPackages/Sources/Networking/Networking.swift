@@ -57,7 +57,9 @@ public struct Networking {
 
             return try decoder.decode(T.self, from: data)
         } catch {
-            logger.error(message: "error for \(request) : \(error.localizedDescription)")
+            if !(error is CancellationError) {
+                logger.error(message: "error for \(request) : \(error.localizedDescription)")
+            }
             throw error
         }
     }

@@ -8,12 +8,14 @@
 import DesignSystem
 import Home
 import Localizable
+import Search
 import SDWebImageSwiftUI
 import SwiftUI
 import Utils
 
 struct AppView: View {
     let homeRouting = Routing()
+    let searchRouting = Routing()
 
     var body: some View {
         TabView {
@@ -29,11 +31,17 @@ struct AppView: View {
                 Text("\(.localizable.homeViewTitle)")
                 }
 
-            Text("Tab 2")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                }
+            NavigationStack {
+                SearchCoordinator()
+                    .navigationDestination(for: Search.PublicDestination.self) { _ in
+                        EmptyView()
+                    }
+            }
+            .environment(searchRouting)
+            .tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("\(.localizable.searchViewTitle)")
+            }
         }
         .accentColor(DSColors.whiteText.swiftUIColor)
 

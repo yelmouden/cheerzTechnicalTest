@@ -96,7 +96,7 @@ struct EncartView: View {
                 Spacer()
                 Image(systemName: "heart.fill")
                     .foregroundStyle(Color.red)
-                Text("\(.localizable.homeLikeTitle(nbLikes))")
+                Text(.localizable.homeLikeTitle(nbLikes))
                     .contentTransition(.numericText())
                     .font(.footnote)
                     .bold()

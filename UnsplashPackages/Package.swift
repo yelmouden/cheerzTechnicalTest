@@ -24,6 +24,9 @@ let package = Package(
             name: "SharedModels",
             targets: ["SharedModels"]),
         .library(
+            name: "Search",
+            targets: ["Search"]),
+        .library(
             name: "Localizable",
             targets: ["Localizable"]),
         .library(
@@ -101,6 +104,17 @@ let package = Package(
                     .process("Resources")
             ]
 
+        ),
+        .target(
+            name: "Search",
+            dependencies: [
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                "DesignSystem",
+                "Localizable",
+                "Networking",
+                "SharedModels",
+                "Utils"
+            ]
         ),
         .target(
             name: "SharedModels",

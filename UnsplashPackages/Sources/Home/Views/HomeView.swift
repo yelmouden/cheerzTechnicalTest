@@ -25,6 +25,8 @@ struct HomeView: View {
     var body: some View {
         MainContainer {
             switch viewModel.state {
+            case .idle:
+                EmptyView()
             case .loading:
                 LoaderView()
                     .frame(width: 30, height: 30)

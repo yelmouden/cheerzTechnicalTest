@@ -8,6 +8,7 @@
 import Foundation
 
 public enum LoadingState<T: Equatable>: Equatable {
+    case idle
     case loading
     case loaded(T)
     case error

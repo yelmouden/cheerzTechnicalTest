@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC40D66E2BA9CC3000818E30 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = DC40D66D2BA9CC3000818E30 /* Search */; };
 		DC98A5A52BA888DF0086662E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */; };
 		DC9EDC772BA5FDC500FFA6F3 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = DC9EDC762BA5FDC500FFA6F3 /* Home */; };
 		DCB6EE3F2BA610E500CD9998 /* AppConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DCB6EE3E2BA610E500CD9998 /* AppConfiguration */; };
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC40D66E2BA9CC3000818E30 /* Search in Frameworks */,
 				DCB6EE412BA72F1D00CD9998 /* DesignSystem in Frameworks */,
 				DCB6EE432BA87E7700CD9998 /* Localizable in Frameworks */,
 				DC9EDC772BA5FDC500FFA6F3 /* Home in Frameworks */,
@@ -176,6 +178,7 @@
 				DCB6EE3E2BA610E500CD9998 /* AppConfiguration */,
 				DCB6EE402BA72F1D00CD9998 /* DesignSystem */,
 				DCB6EE422BA87E7700CD9998 /* Localizable */,
+				DC40D66D2BA9CC3000818E30 /* Search */,
 			);
 			productName = Unsplah;
 			productReference = DCFB4A462BA5D48E00B0F78B /* Unsplah.app */;
@@ -633,6 +636,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC40D66D2BA9CC3000818E30 /* Search */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Search;
+		};
 		DC9EDC762BA5FDC500FFA6F3 /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Home;
