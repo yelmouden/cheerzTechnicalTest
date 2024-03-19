@@ -35,6 +35,9 @@ let package = Package(
         .library(
             name: "Utils",
             targets: ["Utils"]),
+        .library(
+            name: "XCTestUtils",
+            targets: ["XCTestUtils"]),
 
     ],
     dependencies: [
@@ -45,6 +48,7 @@ let package = Package(
         .package(url: "https://github.com/realm/SwiftLint", branch: "main"),
         .package(url: "https://github.com/liamnichols/xcstrings-tool-plugin.git", from: "0.1.2"),
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.15.4"),
+        .package(url: "https://github.com/pointfreeco/swift-concurrency-extras", from: "1.0.0"),
     ],
     targets: [
         .target(
@@ -96,14 +100,11 @@ let package = Package(
             name: "HomeTests",
             dependencies: [
                 "Home",
+                "XCTestUtils",
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "Nimble", package: "Nimble"),
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
-            ],
-            resources: [
-                    .process("Resources")
             ]
-
         ),
         .target(
             name: "Search",
@@ -114,6 +115,18 @@ let package = Package(
                 "Networking",
                 "SharedModels",
                 "Utils"
+            ]
+        ),
+        .testTarget(
+            name: "SearchTests",
+            dependencies: [
+                "DesignSystem",
+                "Search",
+                "XCTestUtils",
+                .product(name: "ConcurrencyExtras", package: "swift-concurrency-extras"),
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                .product(name: "Nimble", package: "Nimble"),
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
             ]
         ),
         .target(
@@ -162,6 +175,19 @@ let package = Package(
                 "Networking",
                 .product(name: "Nimble", package: "Nimble"),
             ]
-        )
+        ),
+        .target(
+            name: "XCTestUtils",
+            dependencies: [
+                "AppConfiguration",
+                "DesignSystem"
+            ],
+            resources: [
+                .process("Resources")
+            ],
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
+        ),
     ]
 )

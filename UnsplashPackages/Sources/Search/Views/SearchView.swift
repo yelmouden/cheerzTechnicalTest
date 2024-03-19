@@ -30,6 +30,7 @@ struct SearchView: View {
             case .loaded(let photos):
                 if photos.isEmpty {
                     Text(.localizable.searchNotFoundTitle)
+                        .foregroundStyle(DSColors.whiteText.swiftUIColor)
                         .bold()
                         .font(.title2)
                 } else {
@@ -58,6 +59,7 @@ struct SearchView: View {
 
             case .error:
                 Text(.localizable.errorViewTitle)
+                    .foregroundStyle(DSColors.whiteText.swiftUIColor)
             }
         }
         .searchable(text: $searchText)

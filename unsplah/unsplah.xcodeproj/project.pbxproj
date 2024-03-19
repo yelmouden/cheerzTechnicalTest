@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC4C27632BAA40C900FB661C /* Search.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Search.xctestplan; path = ../UnsplashPackages/Sources/Search/Search.xctestplan; sourceTree = "<group>"; };
 		DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCFB4A462BA5D48E00B0F78B /* Unsplah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahApp.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		DCFB4A3D2BA5D48E00B0F78B = {
 			isa = PBXGroup;
 			children = (
+				DC4C27632BAA40C900FB661C /* Search.xctestplan */,
 				DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */,
 				DCFB4A482BA5D48E00B0F78B /* Unsplah */,
 				DCFB4A592BA5D49000B0F78B /* UnsplahTests */,

@@ -5,11 +5,14 @@
 //  Created by Yassin El Mouden on 18/03/2024.
 //
 
+import AppConfiguration
 import Dependencies
+import DesignSystem
 import SnapshotTesting
 import SwiftUI
 import Utils
 import XCTest
+import XCTestUtils
 
 @testable import Home
 
@@ -17,6 +20,7 @@ final class HomeViewTests: XCTestCase {
 
     class override func setUp() {
         isRecording = false
+        configureSnapshotTest()
     }
 
     func testHomeView_shouldDisplayLoadingView_whenInit() {
@@ -36,8 +40,8 @@ final class HomeViewTests: XCTestCase {
     }
 
     func testHomeView_shouldDisplayGrid_whenRequestSuccedeed() {
-        guard let photoPath = Bundle.module.path(forResource: "photo", ofType: "jpeg"),
-              let profilePhotoPath = Bundle.module.path(forResource: "profilePhoto", ofType: "jpeg")
+        guard let photoPath = XCTestUtilsBundle.path(forResource: "photo", ofType: "jpeg"),
+              let profilePhotoPath = XCTestUtilsBundle.path(forResource: "profilePhoto", ofType: "jpeg")
         else {
             XCTFail("Image not found")
             return

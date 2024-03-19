@@ -111,12 +111,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Results not found"
+            "value" : "No results found"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Pas de résultats"
           }
         }

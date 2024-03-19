@@ -88,7 +88,7 @@ final class SearchViewModel {
         guard currentPage + 1 <= totalPages, taskPagnition == nil else { return }
 
         currentPage += 1
-        
+
         self.taskPagnition = Task {
             await search(text: searchedText, shouldLoadNextPage: true)
         }
