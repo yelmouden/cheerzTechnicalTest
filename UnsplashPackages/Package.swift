@@ -39,8 +39,8 @@ let package = Package(
             name: "Utils",
             targets: ["Utils"]),
         .library(
-            name: "XCTestUtils",
-            targets: ["XCTestUtils"]),
+            name: "UnitTestsUtils",
+            targets: ["UnitTestsUtils"]),
 
     ],
     dependencies: [
@@ -87,6 +87,15 @@ let package = Package(
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]
         ),
+        .testTarget(
+            name: "DetailsTests",
+            dependencies: [
+                "Details",
+                "UnitTestsUtils",
+                .product(name: "Nimble", package: "Nimble"),
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+            ]
+        ),
         .target(
             name: "DesignSystem",
             dependencies: [
@@ -117,7 +126,7 @@ let package = Package(
             name: "HomeTests",
             dependencies: [
                 "Home",
-                "XCTestUtils",
+                "UnitTestsUtils",
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "Nimble", package: "Nimble"),
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
@@ -139,7 +148,7 @@ let package = Package(
             dependencies: [
                 "DesignSystem",
                 "Search",
-                "XCTestUtils",
+                "UnitTestsUtils",
                 .product(name: "ConcurrencyExtras", package: "swift-concurrency-extras"),
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "Nimble", package: "Nimble"),
@@ -194,10 +203,11 @@ let package = Package(
             ]
         ),
         .target(
-            name: "XCTestUtils",
+            name: "UnitTestsUtils",
             dependencies: [
                 "AppConfiguration",
-                "DesignSystem"
+                "DesignSystem",
+                "SharedModels"
             ],
             resources: [
                 .process("Resources")

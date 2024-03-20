@@ -15,7 +15,9 @@ final class DetailsViewModel {
 
     // MARK: Public Properties
 
-    var urlPhoto: String { photo.urlsPhotoType.regular }
+    var urlPhoto: String {
+        photo.urlsPhotoType.regular
+    }
     var nbLikes: Int { photo.likes }
     var description: String { photo.descriptionText }
     var urlProfilePhoto: String { photo.user.urlsProfilePhotoType.large }

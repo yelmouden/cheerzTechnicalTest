@@ -11,7 +11,7 @@ import DesignSystem
 import SnapshotTesting
 import SwiftUI
 import Utils
-import XCTestUtils
+import UnitTestsUtils
 import XCTest
 
 @testable import Search
@@ -58,44 +58,9 @@ final class SearchViewTests: XCTestCase {
                 .init(
                     totalPages: 1,
                     photos: [
-                        .init(
-                            id: "1",
-                            likes: 20,
-                            urlsPhotoType: .init(
-                                raw: "",
-                                full: "",
-                                regular: "",
-                                small: photoKey,
-                                thumb: ""
-                            ),
-                            user: .init(
-                                username: "username 1",
-                                urlsProfilePhotoType: .init(
-                                    small: profilePhotoKey,
-                                    medium: "",
-                                    large: ""
-                                )
-                            )
-                        ),
-                        .init(
-                            id: "2",
-                            likes: 20,
-                            urlsPhotoType: .init(
-                                raw: "",
-                                full: "",
-                                regular: "",
-                                small: photoKey,
-                                thumb: ""
-                            ),
-                            user: .init(
-                                username: "username 2",
-                                urlsProfilePhotoType: .init(
-                                    small: profilePhotoKey,
-                                    medium: "",
-                                    large: ""
-                                )
-                            )
-                        )
+                        .mock(id: "1", urlPhotoSmall: photoKey, username: "username 1", urlPhotoProfileSmall: profilePhotoKey),
+                        .mock(id: "2", urlPhotoSmall: photoKey, username: "username 2", urlPhotoProfileSmall: profilePhotoKey),
+                        .mock(id: "3", urlPhotoSmall: photoKey, username: "username 3", urlPhotoProfileSmall: profilePhotoKey)
                     ]
                 )
             })

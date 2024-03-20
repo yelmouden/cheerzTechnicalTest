@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC34F1902BAB9CC500B47245 /* UITestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7E6352BAB99D900DADAE5 /* UITestingView.swift */; };
 		DC40D66E2BA9CC3000818E30 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = DC40D66D2BA9CC3000818E30 /* Search */; };
 		DC4C27652BAB1CF300FB661C /* Details in Frameworks */ = {isa = PBXBuildFile; productRef = DC4C27642BAB1CF300FB661C /* Details */; };
 		DC98A5A52BA888DF0086662E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */; };
@@ -20,7 +21,6 @@
 		DCFB4A512BA5D49000B0F78B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A502BA5D49000B0F78B /* Preview Assets.xcassets */; };
 		DCFB4A5B2BA5D49000B0F78B /* UnsplahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A5A2BA5D49000B0F78B /* UnsplahTests.swift */; };
 		DCFB4A652BA5D49000B0F78B /* UnsplahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */; };
-		DCFB4A672BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A662BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift */; };
 		DCFB4A752BA5D8D400B0F78B /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC4C27632BAA40C900FB661C /* Search.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Search.xctestplan; path = ../UnsplashPackages/Sources/Search/Search.xctestplan; sourceTree = "<group>"; };
 		DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCD7E6352BAB99D900DADAE5 /* UITestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingView.swift; sourceTree = "<group>"; };
 		DCFB4A462BA5D48E00B0F78B /* Unsplah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahApp.swift; sourceTree = "<group>"; };
 		DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -53,7 +53,6 @@
 		DCFB4A5A2BA5D49000B0F78B /* UnsplahTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahTests.swift; sourceTree = "<group>"; };
 		DCFB4A602BA5D49000B0F78B /* UnsplahUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplahUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahUITests.swift; sourceTree = "<group>"; };
-		DCFB4A662BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UnsplashPackages; path = ../UnsplashPackages; sourceTree = "<group>"; };
 		DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		DCFB4A762BA5D9B300B0F78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +100,6 @@
 		DCFB4A3D2BA5D48E00B0F78B = {
 			isa = PBXGroup;
 			children = (
-				DC4C27632BAA40C900FB661C /* Search.xctestplan */,
 				DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */,
 				DCFB4A482BA5D48E00B0F78B /* Unsplah */,
 				DCFB4A592BA5D49000B0F78B /* UnsplahTests */,
@@ -127,6 +125,7 @@
 				DCFB4A762BA5D9B300B0F78B /* Info.plist */,
 				DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */,
 				DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */,
+				DCD7E6352BAB99D900DADAE5 /* UITestingView.swift */,
 				DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */,
 				DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */,
 				DCFB4A4F2BA5D49000B0F78B /* Preview Content */,
@@ -156,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */,
-				DCFB4A662BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift */,
 			);
 			path = UnsplahUITests;
 			sourceTree = "<group>";
@@ -302,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC34F1902BAB9CC500B47245 /* UITestingView.swift in Sources */,
 				DCFB4A4C2BA5D48E00B0F78B /* AppView.swift in Sources */,
 				DCFB4A4A2BA5D48E00B0F78B /* UnsplahApp.swift in Sources */,
 			);
@@ -319,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCFB4A672BA5D49000B0F78B /* UnsplahUITestsLaunchTests.swift in Sources */,
 				DCFB4A652BA5D49000B0F78B /* UnsplahUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

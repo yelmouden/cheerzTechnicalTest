@@ -12,7 +12,7 @@ import SwiftUI
 /// This method disables animation when running tests
 extension View {
     public func animate<V>(_ animation: Animation?, value: V) -> some View where V: Equatable {
-        if NSClassFromString("XCTest") != nil {
+        if NSClassFromString("XCTest") != nil || ProcessInfo.processInfo.environment["UI_TEST_NAME"] != nil {
             return self.animation(nil, value: value)
         } else {
             return self.animation(animation, value: value)

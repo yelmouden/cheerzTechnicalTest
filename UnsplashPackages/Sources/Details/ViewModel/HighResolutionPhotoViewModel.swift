@@ -15,7 +15,7 @@ final class HighResolutionPhotoViewModel {
 
     // MARK: Public Properties
 
-    var urlPhoto: String { photo.urlsPhotoType.raw }
+    var urlPhoto: String { photo.urlsPhotoType.full }
 
     init(photo: Photo) {
         self.photo = photo

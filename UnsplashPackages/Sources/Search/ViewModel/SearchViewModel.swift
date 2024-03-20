@@ -86,7 +86,7 @@ public final class SearchViewModel {
             taskPagnition = nil
 
         } catch {
-            if !(error is CancellationError), !shouldLoadNextPage {
+            if !error.isCancelledError, !shouldLoadNextPage {
                 state = .error
             }
         }

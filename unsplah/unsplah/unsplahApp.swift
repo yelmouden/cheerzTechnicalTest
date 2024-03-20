@@ -21,7 +21,11 @@ struct UnsplahApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AppView()
+            if let testName = ProcessInfo.processInfo.environment["UI_TEST_NAME"] {
+                UITestingView(name: testName)
+            } else {
+                AppView()
+            }
         }
     }
 }

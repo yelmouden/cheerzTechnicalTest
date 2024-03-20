@@ -21,25 +21,7 @@ final class HomeViewModelTests: XCTestCase {
     }
 
     func testHomeViewModel_shouldHaveStateLoaded_whenRequestSucceeded() async {
-        let expectedData: [Photo] = [.init(
-            id: "1",
-            likes: 10,
-            urlsPhotoType: .init(
-                raw: "",
-                full: "",
-                regular: "",
-                small: "",
-                thumb: ""
-            ),
-            user: .init(
-                username: "suer",
-                urlsProfilePhotoType: .init(
-                    small: "",
-                    medium: "",
-                    large: ""
-                )
-            )
-        )]
+        let expectedData: [Photo] = [.mock(id: "1", username: "user")]
 
         let homeViewModel = withDependencies {
             $0.homeRepository = .init(getListPhotos: {

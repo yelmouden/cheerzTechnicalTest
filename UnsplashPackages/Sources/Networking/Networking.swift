@@ -57,10 +57,13 @@ public struct Networking {
 
             return try decoder.decode(T.self, from: data)
         } catch {
-            if !(error is CancellationError) {
+            if !(error is CancellationError) || (error as? URLError)?.code != .cancelled {
                 logger.error(message: "error for \(request) : \(error.localizedDescription)")
             }
             throw error
         }
     }
 }
+
+
+

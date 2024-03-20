@@ -16,12 +16,21 @@ import Utils
 
 struct AppView: View {
     // Home feature
-    let homeViewModel = HomeViewModel()
+    let homeViewModel: HomeViewModel
     @Bindable var homeRouting = Routing()
 
     // Search feature
-    let searchViewModel = SearchViewModel()
+    let searchViewModel: SearchViewModel
     @Bindable var searchRouting = Routing()
+
+
+    init(
+        homeViewModel: HomeViewModel = HomeViewModel(),
+        searchViewModel: SearchViewModel = SearchViewModel()
+    ) {
+        self.homeViewModel = homeViewModel
+        self.searchViewModel = searchViewModel
+    }
 
     var body: some View {
         TabView {

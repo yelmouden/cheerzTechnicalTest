@@ -18,36 +18,40 @@ struct DetailsView: View {
     var body: some View {
         MainContainer {
             ScrollView {
-                UnsplashWebImage(path: viewModel.urlPhoto) { image in
-                    ZStack(alignment: .bottomTrailing) {
+                ZStack(alignment: .bottomTrailing) {
+                    UnsplashWebImage(path: viewModel.urlPhoto) { image in
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .clipped()
 
-                        Button {
-                            routing.presentSheet(destination: Destination.highResolution)
-                        } label: {
 
-                            Image(systemName: "plus.magnifyingglass")
-                                .font(.title)
-                                .padding(8)
-                                .background(
-                                    Color.black
-                                        .opacity(0.3)
-                                        .cornerRadius(8)
-
-                                )
-                                .padding()
-                        }
-
+                    } placeholder: {
+                        Color.gray
+                            .opacity(0.2)
+                            .frame(height: 250)
                     }
-                } placeholder: {
-                    Color.gray
-                        .opacity(0.2)
-                        .frame(height: 300)
+                    .padding(.bottom, Margins.medium)
+
+                    Button {
+                        routing.presentSheet(destination: Destination.highResolution)
+                    } label: {
+
+                        Image(systemName: "plus.magnifyingglass")
+                            .foregroundColor(DSColors.whiteText.swiftUIColor)
+                            .font(.title)
+                            .padding(8)
+                            .background(
+                                Color.black
+                                    .opacity(0.3)
+                                    .cornerRadius(8)
+
+                            )
+                            .padding()
+                    }
+                    .padding()
+                    .accessibilityIdentifier("highResolution")
                 }
-                .padding(.bottom, Margins.medium)
 
                 HStack {
                     Spacer()

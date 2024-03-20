@@ -12,7 +12,7 @@ import SnapshotTesting
 import SwiftUI
 import Utils
 import XCTest
-import XCTestUtils
+import UnitTestsUtils
 
 @testable import Home
 
@@ -64,63 +64,9 @@ final class HomeViewTests: XCTestCase {
         let homeViewModel = withDependencies {
             $0.homeRepository = .init(getListPhotos: {
                 [
-                    .init(
-                        id: "1",
-                        likes: 100,
-                        urlsPhotoType: .init(
-                            raw: "",
-                            full: "",
-                            regular: "",
-                            small: photoKey,
-                            thumb: ""
-                        ),
-                        user: .init(
-                            username: "username 1",
-                            urlsProfilePhotoType: .init(
-                                small: profilePhotoKey,
-                                medium: "",
-                                large: ""
-                            )
-                        )
-                    ),
-                    .init(
-                        id: "2",
-                        likes: 100,
-                        urlsPhotoType: .init(
-                            raw: "",
-                            full: "",
-                            regular: "",
-                            small: photoKey,
-                            thumb: ""
-                        ),
-                        user: .init(
-                            username: "username 2 ",
-                            urlsProfilePhotoType: .init(
-                                small: profilePhotoKey,
-                                medium: "",
-                                large: ""
-                            )
-                        )
-                    ),
-                    .init(
-                        id: "3",
-                        likes: 100,
-                        urlsPhotoType: .init(
-                            raw: "",
-                            full: "",
-                            regular: "",
-                            small: photoKey,
-                            thumb: ""
-                        ),
-                        user: .init(
-                            username: "username 3",
-                            urlsProfilePhotoType: .init(
-                                small: profilePhotoKey,
-                                medium: "",
-                                large: ""
-                            )
-                        )
-                    )
+                    .mock(id: "1", urlPhotoSmall: photoKey, username: "username 1", urlPhotoProfileSmall: profilePhotoKey),
+                    .mock(id: "2", urlPhotoSmall: photoKey, username: "username 2", urlPhotoProfileSmall: profilePhotoKey),
+                    .mock(id: "3", urlPhotoSmall: photoKey, username: "username 3", urlPhotoProfileSmall: profilePhotoKey)
                 ]
             })
         } operation: {
@@ -136,7 +82,7 @@ final class HomeViewTests: XCTestCase {
 
        let vc = convertToViewControllerForSnapshotTesting(view: view)
 
-        assertSnapshot(of: vc, as: .wait(for: 1, on: .image(on: .iPhone13)))
+        assertSnapshot(of: vc, as: .wait(for: 2, on: .image(on: .iPhone13)))
     }
 
     func testHomeView_shouldDisplayErrorView_whenRequestFailed() {

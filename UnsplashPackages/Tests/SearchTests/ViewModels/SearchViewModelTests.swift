@@ -38,26 +38,9 @@ final class SearchViewModelTests: XCTestCase {
 
     func testSearchViewModel_shouldReturnPhotosState_whenRequestFinished() async {
         let expectedPhotos: [Photo] = [
-            .init(
-                id: "1",
-                likes: 10,
-                urlsPhotoType: .init(
-                    raw: "",
-                    full: "",
-                    regular: "",
-                    small: "",
-                    thumb: ""
-                ),
-                user: .init(
-                    username: "",
-                    urlsProfilePhotoType: .init(
-                        small: "",
-                        medium: "",
-                        large: ""
-                    )
-                )
-            )
+            .mock(id: "1", username: "username 1")
         ]
+
 
         let searchViewModel = withDependencies {
             $0.seachRepository = .init(search: { _,_ in
@@ -77,44 +60,8 @@ final class SearchViewModelTests: XCTestCase {
 
     func testSearchViewModel_shouldReturnAppendedPhotos_whenLoadMorePhotos() async {
         var poolPhotos: [Photo] = [
-            .init(
-                id: "1",
-                likes: 10,
-                urlsPhotoType: .init(
-                    raw: "",
-                    full: "",
-                    regular: "",
-                    small: "",
-                    thumb: ""
-                ),
-                user: .init(
-                    username: "",
-                    urlsProfilePhotoType: .init(
-                        small: "",
-                        medium: "",
-                        large: ""
-                    )
-                )
-            ),
-            .init(
-                id: "2",
-                likes: 10,
-                urlsPhotoType: .init(
-                    raw: "",
-                    full: "",
-                    regular: "",
-                    small: "",
-                    thumb: ""
-                ),
-                user: .init(
-                    username: "",
-                    urlsProfilePhotoType: .init(
-                        small: "",
-                        medium: "",
-                        large: ""
-                    )
-                )
-            )
+            .mock(id: "1", username: "username 1"),
+            .mock(id: "2", username: "username 2")
         ]
 
         let expectedPhotos = poolPhotos
@@ -177,25 +124,8 @@ final class SearchViewModelTests: XCTestCase {
     func testSearchViewModel_shouldNotSetStateAsError_whenRequestForMorePhotosFailed() async {
 
         let photos: [Photo] = [
-            .init(
-                id: "1",
-                likes: 10,
-                urlsPhotoType: .init(
-                    raw: "",
-                    full: "",
-                    regular: "",
-                    small: "",
-                    thumb: ""
-                ),
-                user: .init(
-                    username: "",
-                    urlsProfilePhotoType: .init(
-                        small: "",
-                        medium: "",
-                        large: ""
-                    )
-                )
-            )]
+            .mock(id: "1", username: "username 1")
+        ]
 
         var results = [Result<SearchResult, Error>]()
 

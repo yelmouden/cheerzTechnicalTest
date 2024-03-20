@@ -35,9 +35,7 @@ public struct UnsplashWebImage<ContentView: View, Placeholder: View>: View {
         }
         .onAppear {
             imageLoader.load(path: path) { image in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    self.image = image
-                }
+                self.image = image
             }
         }
         .onDisappear {

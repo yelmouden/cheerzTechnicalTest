@@ -67,7 +67,7 @@ struct HomeView: View {
                 })
             }
         }
-        .animation(.bouncy, value: viewModel.state)
+        .animate(.bouncy, value: viewModel.state)
         .navigationTitle("\(.localizable.homeViewTitle)")
         .task {
             await viewModel.retrieve()
