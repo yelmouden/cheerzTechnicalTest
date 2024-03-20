@@ -8,8 +8,6 @@
 import SwiftUI
 
 public struct UnsplashWebImage<ContentView: View, Placeholder: View>: View {
-
-
     @State private var image: UIImage?
     @Environment(\.imageLoader) private var imageLoader
 
@@ -28,24 +26,26 @@ public struct UnsplashWebImage<ContentView: View, Placeholder: View>: View {
     }
     public var body: some View {
         VStack {
-            ZStack {
+            if let image {
+                content(Image(uiImage: image))
+                   .transition(.fade)
+            } else {
                 placeholder()
-
-                if let image {
-                    content(Image(uiImage: image))
-                        .transition(.fade)
-                }
             }
-            .animate(.easeInOut, value: image)
         }
         .onAppear {
             imageLoader.load(path: path) { image in
-                self.image = image
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.image = image
+                }
             }
         }
         .onDisappear {
             imageLoader.cancel(for: path)
         }
+
+        .animate(.easeInOut, value: image)
+
     }
 }
 

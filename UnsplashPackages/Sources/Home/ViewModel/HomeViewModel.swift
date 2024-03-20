@@ -12,8 +12,7 @@ import SharedModels
 import Utils
 
 @Observable
-final class HomeViewModel {
-    
+final public class HomeViewModel {
     // MARK: Dependencies
 
     @ObservationIgnored
@@ -22,6 +21,10 @@ final class HomeViewModel {
     // MARK: Public Properties
 
     var state: LoadingState<[Photo]> = .loading
+
+    // MARK: Init
+
+    public init() {}
 
     // MARK: Public Methods
 

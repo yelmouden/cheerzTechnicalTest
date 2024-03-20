@@ -39,7 +39,7 @@ public struct PhotoCell: View {
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .clipped()
             } placeholder: {
-                Color.gray
+                Color.clear
             }
             VStack {
                 Spacer()
@@ -51,7 +51,7 @@ public struct PhotoCell: View {
             }
 
         }
-        .frame(height: 350)
+        .frame(height: 230)
         .overlay(
             RoundedRectangle(cornerRadius: CornerRadius.small)
             .stroke(Color.gray, lineWidth: 1)
@@ -90,19 +90,7 @@ struct EncartView: View {
 
                 Spacer()
             }
-            .padding([.top, .leading, .trailing], Margins.small)
-
-            HStack {
-                Spacer()
-                Image(systemName: "heart.fill")
-                    .foregroundStyle(Color.red)
-                Text(.localizable.homeLikeTitle(nbLikes))
-                    .contentTransition(.numericText())
-                    .font(.footnote)
-                    .bold()
-                    .foregroundStyle(DSColors.whiteText.swiftUIColor)
-            }
-            .padding([.bottom, .leading, .trailing], Margins.small)
+            .padding(Margins.small)
         }
         .frame(maxWidth: .infinity)
         .background(Color.black.opacity(0.6))

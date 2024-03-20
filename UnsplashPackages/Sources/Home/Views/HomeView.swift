@@ -34,12 +34,21 @@ struct HomeView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(photos) { photo in
-                            PhotoCell(
-                                urlPhoto: photo.urlsPhotoType.small,
-                                userName: photo.user.username,
-                                urlUserProfile: photo.user.urlsProfilePhotoType.small,
-                                nbLikes: photo.likes
-                            )
+                            Button {
+                                routing.push(destination: PublicDestination.details(photo))
+                            } label: {
+                                PhotoCell(
+                                    urlPhoto: photo.urlsPhotoType.small,
+                                    userName: photo.user.username,
+                                    urlUserProfile: photo.user.urlsProfilePhotoType.small,
+                                    nbLikes: photo.likes
+                                )
+                            }
+                            .scrollTransition { content, phase in
+                                content
+                                    .blur(radius: phase.value > -1 ? 0 : 4)
+
+                            }
                         }
                     }
                     .padding(.bottom, Margins.medium)
@@ -66,6 +75,7 @@ struct HomeView: View {
     }
 }
 
+/*
 #Preview {
     NavigationStack {
         HomeView(viewModel: withDependencies {
@@ -96,3 +106,4 @@ struct HomeView: View {
     }
     .environment(Routing())
 }
+*/

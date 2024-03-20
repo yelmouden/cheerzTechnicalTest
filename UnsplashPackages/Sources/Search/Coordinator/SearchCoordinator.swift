@@ -9,9 +9,11 @@ import SwiftUI
 import Utils
 
 public struct SearchCoordinator: View {
-    private let viewModel = SearchViewModel()
+    private let viewModel:SearchViewModel
 
-    public init() {}
+    public init(viewModel:SearchViewModel) {
+        self.viewModel = viewModel
+    }
 
     public var body: some View {
         SearchView(viewModel: viewModel)
@@ -21,6 +23,7 @@ public struct SearchCoordinator: View {
     }
 }
 
+/*
 #Preview {
     SearchCoordinator()
-}
+}*/

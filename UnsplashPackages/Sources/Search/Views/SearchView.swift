@@ -8,9 +8,11 @@
 import DesignSystem
 import Localizable
 import SwiftUI
+import Utils
 
 struct SearchView: View {
     @State var searchText: String = ""
+    @Environment(Routing.self) private var routing
 
     private let columns = [GridItem(.adaptive(minimum: 180, maximum: .infinity), spacing: 0)]
     private let viewModel: SearchViewModel
@@ -35,9 +37,11 @@ struct SearchView: View {
                         .font(.title2)
                 } else {
                     ScrollView {
-                        VStack {
-                            LazyVGrid(columns: columns, spacing: 16) {
-                                ForEach(photos) { photo in
+                        LazyVGrid(columns: columns, spacing: 16) {
+                            ForEach(photos) { photo in
+                                Button {
+                                    routing.push(destination: PublicDestination.details(photo))
+                                } label: {
                                     PhotoCell(
                                         urlPhoto: photo.urlsPhotoType.small,
                                         userName: photo.user.username,
@@ -45,15 +49,15 @@ struct SearchView: View {
                                         nbLikes: photo.likes
                                     )
                                 }
-
-                                Color.clear
-                                    .frame(width: 0, height: 0)
-                                    .onAppear {
-                                        viewModel.loadNextPage()
-                                    }
                             }
-                            .padding(.bottom, Margins.medium)
+
+                            Color.clear
+                                .frame(width: 0, height: 0)
+                                .onAppear {
+                                    viewModel.loadNextPage()
+                                }
                         }
+                        .padding(.bottom, Margins.medium)
                     }
                 }
 
@@ -63,19 +67,11 @@ struct SearchView: View {
             }
         }
         .searchable(text: $searchText)
+        .foregroundColor(DSColors.whiteText.swiftUIColor)
         .navigationTitle("\(.localizable.searchViewTitle)")
         .task(id: searchText) {
             await viewModel.search(text: searchText)
         }
-    }
-}
-
-struct MyView: View {
-    var body: some View {
-        Text("ceci est un test")
-            .onAppear {
-                print("ça passe par la")
-            }
     }
 }
 

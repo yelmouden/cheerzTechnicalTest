@@ -6,6 +6,7 @@
 //
 
 import DesignSystem
+import Details
 import Home
 import Localizable
 import Search
@@ -14,15 +15,23 @@ import SwiftUI
 import Utils
 
 struct AppView: View {
-    let homeRouting = Routing()
-    let searchRouting = Routing()
+    // Home feature
+    let homeViewModel = HomeViewModel()
+    @Bindable var homeRouting = Routing()
+
+    // Search feature
+    let searchViewModel = SearchViewModel()
+    @Bindable var searchRouting = Routing()
 
     var body: some View {
         TabView {
-            NavigationStack {
-                HomeCoordinator()
-                    .navigationDestination(for: Home.PublicDestination.self) { _ in
-                        EmptyView()
+            NavigationStack(path: $homeRouting.path) {
+                HomeCoordinator(viewModel: homeViewModel)
+                    .navigationDestination(for: Home.PublicDestination.self) { destination in
+                        switch destination {
+                        case .details(let photo):
+                            DetailsCoordinator(photo: photo)
+                        }
                     }
             }
             .environment(homeRouting)
@@ -31,10 +40,13 @@ struct AppView: View {
                 Text("\(.localizable.homeViewTitle)")
                 }
 
-            NavigationStack {
-                SearchCoordinator()
-                    .navigationDestination(for: Search.PublicDestination.self) { _ in
-                        EmptyView()
+            NavigationStack(path: $searchRouting.path) {
+                SearchCoordinator(viewModel: searchViewModel)
+                    .navigationDestination(for: Search.PublicDestination.self) { destination in
+                        switch destination {
+                        case .details(let photo):
+                            DetailsCoordinator(photo: photo)
+                        }
                     }
             }
             .environment(searchRouting)

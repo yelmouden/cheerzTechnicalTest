@@ -18,6 +18,9 @@ let package = Package(
             name: "DesignSystem",
             targets: ["DesignSystem"]),
         .library(
+            name: "Details",
+            targets: ["Details"]),
+        .library(
             name: "Home",
             targets: ["Home"]),
         .library(
@@ -68,6 +71,20 @@ let package = Package(
             dependencies: [
                 "AppLogger",
                 .product(name: "Nimble", package: "Nimble"),
+            ]
+        ),
+        .target(
+            name: "Details",
+            dependencies: [
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                "DesignSystem",
+                "Localizable",
+                "Networking",
+                "SharedModels",
+                "Utils"
+            ],
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]
         ),
         .target(

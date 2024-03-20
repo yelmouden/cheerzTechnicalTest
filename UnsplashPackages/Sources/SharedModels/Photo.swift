@@ -10,12 +10,20 @@ import Utils
 
 public struct Photo: Decodable, Identifiable, Equatable, Hashable {
     public let id: String
+    public let description: String?
+    public let altDescription: String?
     public let likes: Int
     public let urlsPhotoType: URLPhotoTypes
     public let user: User
 
+    public var descriptionText: String {
+        description ?? altDescription ?? ""
+    }
+
     enum CodingKeys: String, CodingKey {
         case id
+        case description
+        case altDescription
         case likes
         case urlsPhotoType = "urls"
         case user
@@ -23,11 +31,15 @@ public struct Photo: Decodable, Identifiable, Equatable, Hashable {
 
     public init(
         id: String,
+        description: String?,
+        altDescription: String?,
         likes: Int,
         urlsPhotoType: URLPhotoTypes,
         user: User
     ) {
         self.id = id
+        self.description = description
+        self.altDescription = altDescription
         self.likes = likes
         self.urlsPhotoType = urlsPhotoType
         self.user = user

@@ -12,7 +12,7 @@ import SharedModels
 import Utils
 
 @Observable
-final class SearchViewModel {
+public final class SearchViewModel {
 
     // MARK: Dependencies
 
@@ -24,6 +24,7 @@ final class SearchViewModel {
     var state: LoadingState<[Photo]> = .idle
 
     // MARK: Private Properties
+
     private var searchedText: String = ""
     private var currentPage = 1
     
@@ -33,6 +34,13 @@ final class SearchViewModel {
     private var photos: [Photo] = []
 
     private var taskPagnition: Task<Void, Never>?
+
+
+    // MARK: Init
+
+    public init() {
+        
+    }
 
     // MARK: Public Methods
 

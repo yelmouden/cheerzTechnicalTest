@@ -9,15 +9,27 @@ import Foundation
 import SwiftUI
 import Observation
 
+public class AnyIdentifiable: Identifiable {
+    public let destination: any Identifiable
+    public init(destination: any Identifiable) {
+        self.destination = destination
+    }
+}
+
 @Observable
 final public class Routing {
-    private var path: NavigationPath
+    public var presentedSheet: AnyIdentifiable?
+    public var path: NavigationPath
 
     public init(path: NavigationPath = NavigationPath()) {
         self.path = path
     }
 
-    public func push(destination: some Hashable) {
+    public func push(destination: any Hashable) {
         path.append(destination)
     }
+
+    public func presentSheet(destination: any Identifiable) {
+          presentedSheet = AnyIdentifiable(destination: destination)
+      }
 }
