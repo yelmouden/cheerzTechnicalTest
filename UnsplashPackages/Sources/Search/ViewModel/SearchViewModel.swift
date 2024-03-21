@@ -16,8 +16,7 @@ public final class SearchViewModel {
 
     // MARK: Dependencies
 
-    @ObservationIgnored
-    @Dependency(\.seachRepository) var searchRepository
+    @ObservationIgnored @Dependency(\.seachRepository) var searchRepository
 
     // MARK: Public Properties
 
@@ -96,7 +95,7 @@ public final class SearchViewModel {
         guard currentPage + 1 <= totalPages, taskPagnition == nil else { return }
 
         currentPage += 1
-
+        
         self.taskPagnition = Task {
             await search(text: searchedText, shouldLoadNextPage: true)
         }

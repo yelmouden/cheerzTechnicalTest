@@ -23,7 +23,6 @@ final class DetailsViewModel {
     var urlProfilePhoto: String { photo.user.urlsProfilePhotoType.large }
     var username: String { photo.user.username }
 
-
     init(photo: Photo) {
         self.photo = photo
     }

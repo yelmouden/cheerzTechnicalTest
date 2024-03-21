@@ -82,7 +82,6 @@ struct EncartView: View {
                 }
                 .frame(width: 32, height: 32)
 
-
                 Text("\(userName)")
                     .font(.footnote)
                     .bold()

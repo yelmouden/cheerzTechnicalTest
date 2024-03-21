@@ -9,7 +9,9 @@ import SwiftUI
 
 public struct UnsplashWebImage<ContentView: View, Placeholder: View>: View {
     @State private var image: UIImage?
-    @Environment(\.imageLoader) private var imageLoader
+    
+    @Environment(\.imageLoader)
+    private var imageLoader
 
     private let path: String
     private var content: ((Image) -> ContentView)
@@ -24,6 +26,7 @@ public struct UnsplashWebImage<ContentView: View, Placeholder: View>: View {
         self.content = content
         self.placeholder = placeholder
     }
+    
     public var body: some View {
         VStack {
             if let image {

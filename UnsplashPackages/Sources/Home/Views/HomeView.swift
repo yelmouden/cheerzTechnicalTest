@@ -16,7 +16,8 @@ struct HomeView: View {
     private let viewModel: HomeViewModel
     private let columns = [GridItem(.adaptive(minimum: 180, maximum: .infinity), spacing: 0)]
 
-    @Environment(Routing.self) private var routing
+    @Environment(Routing.self)
+    private var routing
 
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -74,36 +75,3 @@ struct HomeView: View {
         }
     }
 }
-
-/*
-#Preview {
-    NavigationStack {
-        HomeView(viewModel: withDependencies {
-            $0.homeRepository = .init(getListPhotos: {
-                [Photo(
-                    id: "",
-                    likes: 10,
-                    urlsPhotoType: .init(
-                        raw: "",
-                        full: "",
-                        regular: "",
-                        small: "",
-                        thumb: ""
-                    ),
-                    user: .init(
-                        username: "",
-                        urlsProfilePhotoType: .init(
-                            small: "",
-                            medium: "",
-                            large: ""
-                        )
-                    )
-                )]
-            })
-        } operation: {
-            HomeViewModel()
-        })
-    }
-    .environment(Routing())
-}
-*/

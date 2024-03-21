@@ -10,8 +10,8 @@ import UIKit
 
 public class AppConfiguration {
     public enum API {
-        public static var apiEndPoint: String { return Info().API_ENDPOINT }
-        public static var apiKey: String { return Info().API_KEY }
+        public static var apiEndPoint: String { Info().API_ENDPOINT }
+        public static var apiKey: String { Info().API_KEY }
     }
 
     public static func setupNavigationBar(backgroundColor: UIColor, titleColor: UIColor) {

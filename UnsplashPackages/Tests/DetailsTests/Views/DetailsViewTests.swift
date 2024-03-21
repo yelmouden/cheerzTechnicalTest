@@ -58,6 +58,6 @@ final class DetailsViewTests: XCTestCase {
 
         let vc = convertToViewControllerForSnapshotTesting(view: view)
 
-        assertSnapshot(of: vc, as: .wait(for: 0.5, on: .image(on: .iPhone13)))
+        assertSnapshot(of: vc, as: .wait(for: 1, on: .image(on: .iPhone13)))
     }
 }

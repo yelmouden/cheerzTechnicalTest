@@ -19,19 +19,11 @@
 		DCFB4A4C2BA5D48E00B0F78B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */; };
 		DCFB4A4E2BA5D49000B0F78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */; };
 		DCFB4A512BA5D49000B0F78B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A502BA5D49000B0F78B /* Preview Assets.xcassets */; };
-		DCFB4A5B2BA5D49000B0F78B /* UnsplahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A5A2BA5D49000B0F78B /* UnsplahTests.swift */; };
 		DCFB4A652BA5D49000B0F78B /* UnsplahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */; };
 		DCFB4A752BA5D8D400B0F78B /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DCFB4A572BA5D49000B0F78B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DCFB4A3E2BA5D48E00B0F78B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DCFB4A452BA5D48E00B0F78B;
-			remoteInfo = Unsplah;
-		};
 		DCFB4A612BA5D49000B0F78B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DCFB4A3E2BA5D48E00B0F78B /* Project object */;
@@ -43,20 +35,18 @@
 
 /* Begin PBXFileReference section */
 		DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCC6DC872BAC64F3007BBA82 /* Unsplash.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unsplash.xctestplan; sourceTree = "<group>"; };
 		DCD7E6352BAB99D900DADAE5 /* UITestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingView.swift; sourceTree = "<group>"; };
-		DCFB4A462BA5D48E00B0F78B /* Unsplah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplah.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCFB4A462BA5D48E00B0F78B /* Unsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB4A492BA5D48E00B0F78B /* UnsplahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahApp.swift; sourceTree = "<group>"; };
 		DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCFB4A502BA5D49000B0F78B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DCFB4A562BA5D49000B0F78B /* UnsplahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCFB4A5A2BA5D49000B0F78B /* UnsplahTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahTests.swift; sourceTree = "<group>"; };
-		DCFB4A602BA5D49000B0F78B /* UnsplahUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplahUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCFB4A602BA5D49000B0F78B /* UnsplashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahUITests.swift; sourceTree = "<group>"; };
 		DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UnsplashPackages; path = ../UnsplashPackages; sourceTree = "<group>"; };
 		DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		DCFB4A762BA5D9B300B0F78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unsplah.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +60,6 @@
 				DC4C27652BAB1CF300FB661C /* Details in Frameworks */,
 				DC9EDC772BA5FDC500FFA6F3 /* Home in Frameworks */,
 				DCB6EE3F2BA610E500CD9998 /* AppConfiguration in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCFB4A532BA5D49000B0F78B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				DCFB4A732BA5D4BB00B0F78B /* UnsplashPackages */,
-				DCFB4A482BA5D48E00B0F78B /* Unsplah */,
-				DCFB4A592BA5D49000B0F78B /* UnsplahTests */,
-				DCFB4A632BA5D49000B0F78B /* UnsplahUITests */,
+				DCFB4A482BA5D48E00B0F78B /* Unsplash */,
+				DCFB4A632BA5D49000B0F78B /* UnsplashUITests */,
 				DCFB4A472BA5D48E00B0F78B /* Products */,
 				DC9EDC752BA5FDC500FFA6F3 /* Frameworks */,
 			);
@@ -112,14 +94,13 @@
 		DCFB4A472BA5D48E00B0F78B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DCFB4A462BA5D48E00B0F78B /* Unsplah.app */,
-				DCFB4A562BA5D49000B0F78B /* UnsplahTests.xctest */,
-				DCFB4A602BA5D49000B0F78B /* UnsplahUITests.xctest */,
+				DCFB4A462BA5D48E00B0F78B /* Unsplash.app */,
+				DCFB4A602BA5D49000B0F78B /* UnsplashUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DCFB4A482BA5D48E00B0F78B /* Unsplah */ = {
+		DCFB4A482BA5D48E00B0F78B /* Unsplash */ = {
 			isa = PBXGroup;
 			children = (
 				DCFB4A762BA5D9B300B0F78B /* Info.plist */,
@@ -127,12 +108,12 @@
 				DCFB4A4B2BA5D48E00B0F78B /* AppView.swift */,
 				DCD7E6352BAB99D900DADAE5 /* UITestingView.swift */,
 				DCFB4A4D2BA5D49000B0F78B /* Assets.xcassets */,
-				DCFB4A772BA5ED6300B0F78B /* Unsplah.xctestplan */,
 				DCFB4A4F2BA5D49000B0F78B /* Preview Content */,
 				DCFB4A742BA5D8D400B0F78B /* Common.xcconfig */,
 				DC98A5A42BA888DF0086662E /* LaunchScreen.storyboard */,
+				DCC6DC872BAC64F3007BBA82 /* Unsplash.xctestplan */,
 			);
-			path = Unsplah;
+			path = Unsplash;
 			sourceTree = "<group>";
 		};
 		DCFB4A4F2BA5D49000B0F78B /* Preview Content */ = {
@@ -143,28 +124,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		DCFB4A592BA5D49000B0F78B /* UnsplahTests */ = {
-			isa = PBXGroup;
-			children = (
-				DCFB4A5A2BA5D49000B0F78B /* UnsplahTests.swift */,
-			);
-			path = UnsplahTests;
-			sourceTree = "<group>";
-		};
-		DCFB4A632BA5D49000B0F78B /* UnsplahUITests */ = {
+		DCFB4A632BA5D49000B0F78B /* UnsplashUITests */ = {
 			isa = PBXGroup;
 			children = (
 				DCFB4A642BA5D49000B0F78B /* UnsplahUITests.swift */,
 			);
-			path = UnsplahUITests;
+			path = UnsplashUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DCFB4A452BA5D48E00B0F78B /* Unsplah */ = {
+		DCFB4A452BA5D48E00B0F78B /* Unsplash */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DCFB4A6A2BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "Unsplah" */;
+			buildConfigurationList = DCFB4A6A2BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "Unsplash" */;
 			buildPhases = (
 				DCFB4A422BA5D48E00B0F78B /* Sources */,
 				DCFB4A432BA5D48E00B0F78B /* Frameworks */,
@@ -173,8 +146,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				DC279DFD2BAC5ECE004EBD73 /* PBXTargetDependency */,
 			);
-			name = Unsplah;
+			name = Unsplash;
 			packageProductDependencies = (
 				DC9EDC762BA5FDC500FFA6F3 /* Home */,
 				DCB6EE3E2BA610E500CD9998 /* AppConfiguration */,
@@ -184,30 +158,12 @@
 				DC4C27642BAB1CF300FB661C /* Details */,
 			);
 			productName = Unsplah;
-			productReference = DCFB4A462BA5D48E00B0F78B /* Unsplah.app */;
+			productReference = DCFB4A462BA5D48E00B0F78B /* Unsplash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DCFB4A552BA5D49000B0F78B /* UnsplahTests */ = {
+		DCFB4A5F2BA5D49000B0F78B /* UnsplashUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DCFB4A6D2BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "UnsplahTests" */;
-			buildPhases = (
-				DCFB4A522BA5D49000B0F78B /* Sources */,
-				DCFB4A532BA5D49000B0F78B /* Frameworks */,
-				DCFB4A542BA5D49000B0F78B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DCFB4A582BA5D49000B0F78B /* PBXTargetDependency */,
-			);
-			name = UnsplahTests;
-			productName = UnsplahTests;
-			productReference = DCFB4A562BA5D49000B0F78B /* UnsplahTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DCFB4A5F2BA5D49000B0F78B /* UnsplahUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DCFB4A702BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "UnsplahUITests" */;
+			buildConfigurationList = DCFB4A702BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "UnsplashUITests" */;
 			buildPhases = (
 				DCFB4A5C2BA5D49000B0F78B /* Sources */,
 				DCFB4A5D2BA5D49000B0F78B /* Frameworks */,
@@ -218,9 +174,9 @@
 			dependencies = (
 				DCFB4A622BA5D49000B0F78B /* PBXTargetDependency */,
 			);
-			name = UnsplahUITests;
+			name = UnsplashUITests;
 			productName = UnsplahUITests;
-			productReference = DCFB4A602BA5D49000B0F78B /* UnsplahUITests.xctest */;
+			productReference = DCFB4A602BA5D49000B0F78B /* UnsplashUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -236,17 +192,13 @@
 					DCFB4A452BA5D48E00B0F78B = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					DCFB4A552BA5D49000B0F78B = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = DCFB4A452BA5D48E00B0F78B;
-					};
 					DCFB4A5F2BA5D49000B0F78B = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = DCFB4A452BA5D48E00B0F78B;
 					};
 				};
 			};
-			buildConfigurationList = DCFB4A412BA5D48E00B0F78B /* Build configuration list for PBXProject "Unsplah" */;
+			buildConfigurationList = DCFB4A412BA5D48E00B0F78B /* Build configuration list for PBXProject "Unsplash" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -256,13 +208,15 @@
 				fr,
 			);
 			mainGroup = DCFB4A3D2BA5D48E00B0F78B;
+			packageReferences = (
+				DC279DFB2BAC5EC4004EBD73 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = DCFB4A472BA5D48E00B0F78B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DCFB4A452BA5D48E00B0F78B /* Unsplah */,
-				DCFB4A552BA5D49000B0F78B /* UnsplahTests */,
-				DCFB4A5F2BA5D49000B0F78B /* UnsplahUITests */,
+				DCFB4A452BA5D48E00B0F78B /* Unsplash */,
+				DCFB4A5F2BA5D49000B0F78B /* UnsplashUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,13 +230,6 @@
 				DC98A5A52BA888DF0086662E /* LaunchScreen.storyboard in Resources */,
 				DCFB4A4E2BA5D49000B0F78B /* Assets.xcassets in Resources */,
 				DCFB4A752BA5D8D400B0F78B /* Common.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCFB4A542BA5D49000B0F78B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,14 +253,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCFB4A522BA5D49000B0F78B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCFB4A5B2BA5D49000B0F78B /* UnsplahTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DCFB4A5C2BA5D49000B0F78B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,14 +264,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DCFB4A582BA5D49000B0F78B /* PBXTargetDependency */ = {
+		DC279DFD2BAC5ECE004EBD73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DCFB4A452BA5D48E00B0F78B /* Unsplah */;
-			targetProxy = DCFB4A572BA5D49000B0F78B /* PBXContainerItemProxy */;
+			productRef = DC279DFC2BAC5ECE004EBD73 /* SwiftLintPlugin */;
 		};
 		DCFB4A622BA5D49000B0F78B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DCFB4A452BA5D48E00B0F78B /* Unsplah */;
+			target = DCFB4A452BA5D48E00B0F78B /* Unsplash */;
 			targetProxy = DCFB4A612BA5D49000B0F78B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -466,10 +404,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Unsplah/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Unsplash/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Unsplah/Info.plist;
+				INFOPLIST_FILE = Unsplash/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -499,10 +437,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Unsplah/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Unsplash/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Unsplah/Info.plist;
+				INFOPLIST_FILE = Unsplash/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -525,44 +463,6 @@
 			};
 			name = Release;
 		};
-		DCFB4A6E2BA5D49000B0F78B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yelmouden.unsplash.UnsplahTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unsplah.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unsplah";
-			};
-			name = Debug;
-		};
-		DCFB4A6F2BA5D49000B0F78B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yelmouden.unsplash.UnsplahTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unsplah.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unsplah";
-			};
-			name = Release;
-		};
 		DCFB4A712BA5D49000B0F78B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -576,7 +476,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Unsplah;
+				TEST_TARGET_NAME = Unsplash;
 			};
 			name = Debug;
 		};
@@ -593,14 +493,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Unsplah;
+				TEST_TARGET_NAME = Unsplash;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DCFB4A412BA5D48E00B0F78B /* Build configuration list for PBXProject "Unsplah" */ = {
+		DCFB4A412BA5D48E00B0F78B /* Build configuration list for PBXProject "Unsplash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCFB4A682BA5D49000B0F78B /* Debug */,
@@ -609,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DCFB4A6A2BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "Unsplah" */ = {
+		DCFB4A6A2BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "Unsplash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCFB4A6B2BA5D49000B0F78B /* Debug */,
@@ -618,16 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DCFB4A6D2BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "UnsplahTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DCFB4A6E2BA5D49000B0F78B /* Debug */,
-				DCFB4A6F2BA5D49000B0F78B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DCFB4A702BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "UnsplahUITests" */ = {
+		DCFB4A702BA5D49000B0F78B /* Build configuration list for PBXNativeTarget "UnsplashUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCFB4A712BA5D49000B0F78B /* Debug */,
@@ -638,7 +529,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		DC279DFB2BAC5EC4004EBD73 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		DC279DFC2BAC5ECE004EBD73 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC279DFB2BAC5EC4004EBD73 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
 		DC40D66D2BA9CC3000818E30 /* Search */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Search;

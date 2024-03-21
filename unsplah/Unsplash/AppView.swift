@@ -9,8 +9,8 @@ import DesignSystem
 import Details
 import Home
 import Localizable
-import Search
 import SDWebImageSwiftUI
+import Search
 import SwiftUI
 import Utils
 
@@ -22,7 +22,6 @@ struct AppView: View {
     // Search feature
     let searchViewModel: SearchViewModel
     @Bindable var searchRouting = Routing()
-
 
     init(
         homeViewModel: HomeViewModel = HomeViewModel(),
@@ -47,7 +46,7 @@ struct AppView: View {
             .tabItem {
                     Image(systemName: "house")
                 Text("\(.localizable.homeViewTitle)")
-                }
+            }
 
             NavigationStack(path: $searchRouting.path) {
                 SearchCoordinator(viewModel: searchViewModel)

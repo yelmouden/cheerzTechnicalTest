@@ -22,8 +22,3 @@ public struct SearchCoordinator: View {
 
     }
 }
-
-/*
-#Preview {
-    SearchCoordinator()
-}*/

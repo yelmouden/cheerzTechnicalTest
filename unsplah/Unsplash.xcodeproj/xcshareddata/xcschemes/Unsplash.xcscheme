@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DCFB4A452BA5D48E00B0F78B"
-               BuildableName = "Unsplah.app"
-               BlueprintName = "Unsplah"
-               ReferencedContainer = "container:Unsplah.xcodeproj">
+               BuildableName = "Unsplash.app"
+               BlueprintName = "Unsplash"
+               ReferencedContainer = "container:Unsplash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Unsplah/Unsplah.xctestplan"
+            reference = "container:Unsplash/Unsplash.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -40,9 +40,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DCFB4A552BA5D49000B0F78B"
-               BuildableName = "UnsplahTests.xctest"
-               BlueprintName = "UnsplahTests"
-               ReferencedContainer = "container:Unsplah.xcodeproj">
+               BuildableName = "UnsplashTests.xctest"
+               BlueprintName = "UnsplashTests"
+               ReferencedContainer = "container:Unsplash.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -51,9 +51,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DCFB4A5F2BA5D49000B0F78B"
-               BuildableName = "UnsplahUITests.xctest"
-               BlueprintName = "UnsplahUITests"
-               ReferencedContainer = "container:Unsplah.xcodeproj">
+               BuildableName = "UnsplashUITests.xctest"
+               BlueprintName = "UnsplashUITests"
+               ReferencedContainer = "container:Unsplash.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -73,9 +73,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DCFB4A452BA5D48E00B0F78B"
-            BuildableName = "Unsplah.app"
-            BlueprintName = "Unsplah"
-            ReferencedContainer = "container:Unsplah.xcodeproj">
+            BuildableName = "Unsplash.app"
+            BlueprintName = "Unsplash"
+            ReferencedContainer = "container:Unsplash.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -90,9 +90,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DCFB4A452BA5D48E00B0F78B"
-            BuildableName = "Unsplah.app"
-            BlueprintName = "Unsplah"
-            ReferencedContainer = "container:Unsplah.xcodeproj">
+            BuildableName = "Unsplash.app"
+            BlueprintName = "Unsplash"
+            ReferencedContainer = "container:Unsplash.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -5,8 +5,8 @@
 //  Created by Yassin El Mouden on 16/03/2024.
 //
 
-import Foundation
 import Dependencies
+import Foundation
 import Observation
 import SharedModels
 import Utils
@@ -28,8 +28,9 @@ final public class HomeViewModel {
 
     // MARK: Public Methods
 
-    @MainActor
     // Retrieve latest Photos
+
+    @MainActor
     func retrieve() async {
         do {
             state = .loaded(try await homeRepository.getListPhotos())

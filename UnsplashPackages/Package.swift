@@ -207,7 +207,8 @@ let package = Package(
             dependencies: [
                 "AppConfiguration",
                 "DesignSystem",
-                "SharedModels"
+                "SharedModels",
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
             ],
             resources: [
                 .process("Resources")

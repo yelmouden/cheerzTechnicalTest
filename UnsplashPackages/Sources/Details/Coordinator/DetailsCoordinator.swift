@@ -9,9 +9,10 @@ import SharedModels
 import SwiftUI
 import Utils
 
-
 public struct DetailsCoordinator: View {
-    @Environment(Routing.self) private var routing
+
+    @Environment(Routing.self) 
+    private var routing
 
     let detailsViewModel: DetailsViewModel
     private let photo: Photo
@@ -37,7 +38,3 @@ public struct DetailsCoordinator: View {
             }
     }
 }
-/*
-#Preview {
-    DetailsCoordinator()
-}*/

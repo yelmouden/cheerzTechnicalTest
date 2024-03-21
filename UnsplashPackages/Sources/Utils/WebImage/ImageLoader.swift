@@ -29,6 +29,7 @@ public extension EnvironmentValues {
 
 @Observable
 public class ImageLoader: ImageLoaderType {
+    
     @ObservationIgnored
     private var operations: [String: SDWebImageCombinedOperation] = [:]
 
@@ -39,7 +40,6 @@ public class ImageLoader: ImageLoaderType {
             completion(nil)
             return
         }
-
 
         let imageManager = SDWebImageManager()
 
@@ -73,6 +73,4 @@ public class ImageLoaderMock: ImageLoaderType, ObservableObject {
     }
 
     public func cancel(for path: String) {}
-
-
 }

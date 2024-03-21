@@ -64,6 +64,3 @@ public struct Networking {
         }
     }
 }
-
-
-

@@ -5,8 +5,8 @@
 //  Created by Yassin El Mouden on 14/03/2024.
 //
 
-import Foundation
 import Dependencies
+import Foundation
 
 protocol Requester {
     func data(for request: URLRequest, delegate: (URLSessionTaskDelegate)?) async throws -> (Data, URLResponse)
@@ -22,7 +22,7 @@ final class AnyRequester {
     }
 
     func data(for request: URLRequest, delegate: (URLSessionTaskDelegate)?) async throws -> (Data, URLResponse) {
-        return try await requester.data(for: request, delegate: delegate)
+        try await requester.data(for: request, delegate: delegate)
     }
 }
 

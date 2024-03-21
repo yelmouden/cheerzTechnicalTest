@@ -15,7 +15,7 @@ import XCTest
 
 final class HighResolutionPhotoViewTests: XCTestCase {
     class override func setUp() {
-        isRecording = true
+        isRecording = false
         configureSnapshotTest()
     }
 

@@ -13,7 +13,9 @@ struct DetailsView: View {
     let viewModel: DetailsViewModel
 
     @State var nbLikes = 0
-    @Environment(Routing.self) private var routing
+    
+    @Environment(Routing.self)
+    private var routing
 
     var body: some View {
         MainContainer {
@@ -24,8 +26,6 @@ struct DetailsView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .clipped()
-
-
                     } placeholder: {
                         Color.gray
                             .opacity(0.2)
@@ -122,8 +122,3 @@ struct PhotographerView: View {
 
     }
 }
-
-/*
-#Preview {
-    DetailsView()
-}*/

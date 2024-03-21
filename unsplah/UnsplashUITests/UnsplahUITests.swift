@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class UnsplahUITests: XCTestCase {
+final class UnsplashUITests: XCTestCase {
     var app: XCUIApplication!
 
     override func setUpWithError() throws {

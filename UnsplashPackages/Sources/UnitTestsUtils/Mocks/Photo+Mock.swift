@@ -8,7 +8,6 @@
 import Foundation
 import SharedModels
 
-
 public extension Photo {
     static func mock(
         id: String = "",

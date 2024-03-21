@@ -32,9 +32,7 @@ public struct UnsplahButton: View {
         AnyView(style.makeBody(configuration: configuration))
     }
 }
-
 #Preview {
     UnsplahButton(title: "title") {
-        
     }
 }

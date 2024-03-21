@@ -21,7 +21,7 @@ struct HighResolutionPhotoView: View {
                 .padding()
 
             Spacer()
-           
+
             UnsplashWebImage(path: viewModel.urlPhoto) { image in
                 image
                     .resizable()
@@ -41,8 +41,3 @@ struct HighResolutionPhotoView: View {
         }
     }
 }
-
-/*
- #Preview {
- HighResolutionPhotoView()
- }*/
