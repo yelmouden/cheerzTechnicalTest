@@ -1,0 +1,11 @@
+input_dir: ${PROJECT_DIR}/Sources/${TARGET_NAME}
+output_dir: ${DERIVED_SOURCES_DIR}
+
+xcassets:
+  - inputs: Colors.xcassets
+    outputs:
+      templateName: swift5
+      output: DSColors.swift
+      params:
+          enumName: DSColors
+          publicAccess: true

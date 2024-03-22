@@ -1,0 +1,153 @@
+
+# ### Global conf
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit)
+
+included:
+  - Malt
+
+excluded:
+  - Malt/Generated/*
+  - Malt/Foundation/Models/*
+  - Malt/Foundation/Repositories/SampleData/SampleDataProvider*.swift
+  - Malt/Foundation/Extensions/ObservableType+Retry.swift
+  - Malt/UIComponents/UICollectionView/UICollectionViewLeftAlignedLayout.swift
+
+analyzer_rules:
+  - unused_import
+
+# ### Rules selection
+
+opt_in_rules: # some rules are only opt-in
+  # Find all the available rules by running:
+  # swiftlint rules
+  # - attributes
+  - block_based_kvo
+  - class_delegate_protocol
+  - closing_brace
+  - closure_end_indentation
+  - closure_parameter_position
+  - closure_spacing
+  - colon
+  - comma
+  - compiler_protocol_init
+  - contains_over_first_not_nil
+  - control_statement
+  - cyclomatic_complexity
+  - discouraged_direct_init
+  - dynamic_inline
+  - empty_count
+  - empty_enum_arguments
+  - empty_parameters
+  - empty_parentheses_with_trailing_closure
+  - explicit_init
+  - extension_access_modifier
+  - fallthrough
+  - fatal_error_message
+  - file_length
+  - first_where
+  - for_where
+  - force_cast
+  - force_try
+  - force_unwrapping
+  - function_parameter_count
+  - generic_type_name
+  - identifier_name
+  - implicit_getter
+  - implicit_return
+  - is_disjoint
+  - joined_default_parameter
+  - large_tuple
+  - legacy_cggeometry_functions
+  - legacy_constant
+  - legacy_constructor
+  - legacy_nsgeometry_functions
+  - let_var_whitespace
+  - line_length
+  - literal_expression_end_indentation
+  - mark
+  - multiline_parameters
+  - notification_center_detachment
+  - number_separator
+  - object_literal
+  - opening_brace
+  - operator_usage_whitespace
+  - operator_whitespace
+  - overridden_super_call
+  - pattern_matching_keywords
+  - private_over_fileprivate
+  - prohibited_super_call
+  - protocol_property_accessors_order
+  - redundant_discardable_let
+  - redundant_nil_coalescing
+  - redundant_optional_initialization
+  - redundant_string_enum_value
+  - redundant_void_return
+  - return_arrow_whitespace
+  - shorthand_operator
+  - sorted_imports
+  - statement_position
+  - strict_fileprivate
+  - superfluous_disable_command
+  - switch_case_alignment
+  - syntactic_sugar
+  - todo
+  - trailing_comma
+  - trailing_newline
+  - trailing_semicolon
+  - type_body_length
+  - unneeded_break_in_switch
+  - unneeded_parentheses_in_closure_argument
+  - unused_closure_parameter
+  - unused_enumerated
+  - unused_optional_binding
+  - valid_ibinspectable
+  - vertical_parameter_alignment
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace
+  - void_return
+  - weak_delegate
+
+disabled_rules: # rule identifiers to exclude from running
+  - array_init
+  - conditional_returns_on_newline
+  - discarded_notification_center_observer
+  - explicit_enum_raw_value
+  - explicit_top_level_acl
+  - explicit_type_interface
+  - file_header
+  - implicitly_unwrapped_optional
+  - multiline_arguments
+  - nesting
+  - nimble_operator
+  - no_extension_access_modifier
+  - no_grouping_extension
+  - override_in_extension
+  - private_unit_test
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - single_test_class
+  - switch_case_on_newline
+  - type_name
+  - xctfail_message
+  - trailing_whitespace
+
+### Rules conf
+
+cyclomatic_complexity:
+  warning: 12
+  error: 15
+
+function_body_length: 45
+
+line_length: 142
+
+type_body_length:
+  warning: 250
+  error: 350
+
+file_length: 500
+
+identifier_name:
+  min_length: 0

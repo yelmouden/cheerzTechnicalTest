@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "BD16D72E-3069-4627-BB80-733ADCE4ABF8",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "DetailsTests",
+        "name" : "DetailsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,59 @@
+{
+  "configurations" : [
+    {
+      "id" : "C6B09B06-4660-44AB-A90E-9069576CC5B2",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Unsplash.xcodeproj",
+        "identifier" : "DCFB4A5F2BA5D49000B0F78B",
+        "name" : "UnsplashUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/UnsplashPackages",
+        "identifier" : "HomeTests",
+        "name" : "HomeTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/UnsplashPackages",
+        "identifier" : "AppLoggerTests",
+        "name" : "AppLoggerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/UnsplashPackages",
+        "identifier" : "DetailsTests",
+        "name" : "DetailsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/UnsplashPackages",
+        "identifier" : "NetworkingTests",
+        "name" : "NetworkingTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/UnsplashPackages",
+        "identifier" : "SearchTests",
+        "name" : "SearchTests"
+      }
+    }
+  ],
+  "version" : 1
+}
