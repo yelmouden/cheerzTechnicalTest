@@ -1,11 +1,12 @@
 //
 //  HomeViewTests.swift
-//  
+//
 //
 //  Created by Yassin El Mouden on 18/03/2024.
 //
 
 import AppConfiguration
+import ConcurrencyExtras
 import Dependencies
 import DesignSystem
 import SnapshotTesting
@@ -16,6 +17,7 @@ import UnitTestsUtils
 
 @testable import Home
 
+@MainActor
 final class HomeViewTests: XCTestCase {
 
     class override func setUp() {
@@ -23,20 +25,33 @@ final class HomeViewTests: XCTestCase {
         configureSnapshotTest()
     }
 
-    func testHomeView_shouldDisplayLoadingView_whenInit() {
-        let homeViewModel = withDependencies {
-            $0.homeRepository = .init(getListPhotos: {
-                []
-            })
-        } operation: {
-            HomeViewModel()
+    func testHomeView_shouldDisplayLoadingView_whenInit() async{
+        await withMainSerialExecutor {
+            let homeViewModel = withDependencies {
+                $0.homeRepository = .init(getListPhotos: {
+                    try await Task.sleep(for: .seconds(1))
+                    return []
+                })
+            } operation: {
+                HomeViewModel()
+            }
+
+            let view = NavigationStack {
+                HomeView(viewModel: homeViewModel)
+            }
+            .environment(Routing())
+
+            Task {
+                await homeViewModel.retrieve()
+            }
+
+            await Task.yield()
+
+            let vc = convertToViewControllerForSnapshotTesting(view: view)
+
+            assertSnapshot(of: vc, as: .image(on: .iPhone13))
         }
 
-        let view = NavigationStack {
-            HomeView(viewModel: homeViewModel)
-        }
-        .environment(Routing())
-        assertSnapshot(of: view, as: .image(layout: .device(config: .iPhone13)))
     }
 
     func testHomeView_shouldDisplayGrid_whenRequestSuccedeed() {

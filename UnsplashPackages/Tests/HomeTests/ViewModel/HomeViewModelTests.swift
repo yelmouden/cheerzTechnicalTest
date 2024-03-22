@@ -1,6 +1,6 @@
 //
 //  HomeViewModelTests.swift
-//  
+//
 //
 //  Created by Yassin El Mouden on 18/03/2024.
 //
@@ -15,9 +15,20 @@ import XCTest
 final class HomeViewModelTests: XCTestCase {
 
     func testHomeViewModel_shouldHaveStateLoading_whenInit() {
-        let homeViewModel = HomeViewModel()
+        let homeViewModel = withDependencies {
+            $0.homeRepository = .init(getListPhotos: {
+                try await Task.sleep(for: .seconds(1))
+                return []
+            })
+        } operation: {
+            HomeViewModel()
+        }
 
-        expect(homeViewModel.state) == .loading
+        Task {
+            await homeViewModel.retrieve()
+        }
+
+        expect(homeViewModel.state).toEventually(equal(.loading))
     }
 
     func testHomeViewModel_shouldHaveStateLoaded_whenRequestSucceeded() async {

@@ -20,7 +20,7 @@ final public class HomeViewModel {
 
     // MARK: Public Properties
 
-    var state: LoadingState<[Photo]> = .loading
+    var state: LoadingState<[Photo]> = .idle
 
     // MARK: Init
 
@@ -33,6 +33,10 @@ final public class HomeViewModel {
     @MainActor
     func retrieve() async {
         do {
+            if state == .idle || state == .error {
+                state = .loading
+            }
+
             state = .loaded(try await homeRepository.getListPhotos())
         } catch {
             state = .error
