@@ -27,6 +27,8 @@ jobs:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
       - uses: tashi-iu/setup-fastlane@v1
       - name: "run gym"
         run: |
