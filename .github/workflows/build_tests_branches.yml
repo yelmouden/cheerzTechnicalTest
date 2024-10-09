@@ -19,6 +19,8 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env:
+        FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: "120"
     # The type of runner that the job will run on
     runs-on: macos-latest
 
