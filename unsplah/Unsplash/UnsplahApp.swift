@@ -12,7 +12,7 @@ import SwiftUI
 @main
 struct UnsplahApp: App {
 
-    init() {
+    init() {   
         AppConfiguration.setupNavigationBar(
             backgroundColor: DSColors.background.color,
             titleColor: DSColors.whiteText.color
