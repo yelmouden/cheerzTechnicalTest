@@ -32,4 +32,4 @@ jobs:
       - uses: tashi-iu/setup-fastlane@v1
       - name: "run gym"
         run: |
-          fastlane gym --scheme "Unsplash" --skip_archive	 --clean
+          fastlane gym --scheme "Unsplash" --project "unsplah/Unsplash.xcodeproj" --skip_archive	 --clean
