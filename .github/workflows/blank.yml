@@ -41,4 +41,5 @@ jobs:
         uses: tashi-iu/setup-fastlane@v1
       - name: "run gym"
         run: |
+          defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
           fastlane gym --scheme "Unsplash" --project "unsplah/Unsplash.xcodeproj" --skip_archive	 --clean
