@@ -42,3 +42,23 @@ jobs:
       - name: "run gym"
         run: |
           fastlane gym --scheme "Unsplash" --project "unsplah/Unsplash.xcodeproj" --xcargs "-skipPackagePluginValidation" --skip_archive --skip_codesigning		 --clean
+      - name: Success badge
+        if: success()
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 2a8179a72c9bf767d5a9d348e1dad8e9
+          filename: build-result.json # Use test.svg if you want to use the SVG mode.
+          label: Build
+          message: Success
+          color: green
+      - name: Failure badge
+        if: failure()
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 2a8179a72c9bf767d5a9d348e1dad8e9
+          filename: build-result.json # Use test.svg if you want to use the SVG mode.
+          label: Build
+          message: Fail
+          color: red
