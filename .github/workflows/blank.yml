@@ -41,4 +41,4 @@ jobs:
         uses: tashi-iu/setup-fastlane@v1
       - name: "run gym"
         run: |
-          fastlane gym --scheme "Unsplash" --project "unsplah/Unsplash.xcodeproj" --xcargs "-skipPackagePluginValidation" --skip_archive	 --clean
+          fastlane gym --scheme "Unsplash" --project "unsplah/Unsplash.xcodeproj" --xcargs "-skipPackagePluginValidation" --skip_archive --skip_codesigning		 --clean
