@@ -1,0 +1,13 @@
+//
+//  Common.xcconfig
+//  Unsplah
+//
+//  Created by Yassin El Mouden on 16/03/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+API_ENDPOINT = api.unsplash.com
+API_KEY = gbXZ6Mdh7kROM9sHH7DJ5ipqex4-XSbUUecFG3W56ns
